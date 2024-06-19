@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>성산C&S 웹사이트 시안3</title>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- 헤더, 네비게이션 영역 -->
+    <header id="topBox">   
+        <div id="header-wrap">
+            <div class="logo-home">
+                <a href="index.html">
+                    <img src="images/main-logo.png" alt="헤더 로고">
+                </a>
+            </div>
+            <ul id="menu">
+                <li>
+                    <a href="#">About</a>
+                    <ul class="sub1">
+                        <li><a href="index.html">introduction</a></li>
+                        <li><a href="index.html">history</a></li>
+                        <li><a href="index.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                    <ul class="sub1">
+                        <li><a href="index.html">Business</a></li>
+                        <li><a href="index.html">SI</a></li>
+                        <li><a href="index.html">Outsourcing</a></li>
+                        <li><a href="index.html">IT Consulting</a></li>
+                        <li><a href="index.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Recruit</a>
+                    <ul class="sub1">
+                        <li><a href="#">Recruit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">News</a>
+                    <ul class="sub1">
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburgerBtn">
+                <a href="index.html" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div id="gnb" class="menu-box">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                    <ul class="sub">
+                        <li><a href="index.html">introduction</a></li>
+                        <li><a href="index.html">history</a></li>
+                        <li><a href="index.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Business</a>
+                    <ul class="sub">
+                        <li><a href="index.html">Business</a></li>
+                        <li><a href="index.html">System Integration</a></li>
+                        <li><a href="index.html">Outsourcing</a></li>
+                        <li><a href="index.html">IT Consulting</a></li>
+                        <li><a href="index.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="index.html">Recruit</a>
+                </li>
+                <li>
+                    <a href="index.html">News</a>
+            </ul>
+        </div>
+    </header>
+    <!-- 고정 사이드바 -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <!-- <li><a href="main-banner"></a></li> -->
+            <li><a href="#introduction"></a></li>
+            <li><a href="#business-wrap"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#contact-wrap"></a></li>
+            <li><a href="#footer-wrap"></a></li>
+        </ul>
+    </div>
+    <!-- 메인배너 영역 -->
+    <section id="main-banner" class="section">
+        <div class="mouse-img">
+            <img src="images/mouse-icon.png" alt="mouse">
+        </div>
+        <div id="main-nav">
+            <ul id="nav-icon">
+                <li><a href="#">
+                    <img src="images/about.png" alt="about">
+                    <p>About</p>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/business.png" alt="business">
+                    <p>Business</p>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/recruit.png" alt="recruit">
+                    <p>Recruit</p>
+                </a></li>
+                <li><a href="#">
+                    <img src="images/news.png" alt="news">
+                    <p>News</p>
+                </a></li>
+            </ul>
+        </div>
+        <div id="main-file">
+            <ul>
+                <li><a href="#">
+                    <img src="images/file-icon.png" alt="file-img1">
+                    Solution
+                </a></li>
+                <li><a href="#">
+                    <img src="images/file-icon.png" alt="file-img2">
+                    untitled_1
+                </a></li>
+                <li><a href="#">
+                    <img src="images/file-icon.png" alt="file-img3">
+                    untitled_2
+                </a></li>
+            </ul>
+        </div>
+        <div id="main-bottom">
+            <div id="window">
+                <img src="images/window-icon.png" alt="window">
+                <p>시작</p>
+            </div>
+            <div class="date">
+                <div class="circle">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <img src="images/volume-icon.png" alt="volume-icon">
+                <span id="current-time"></span>
+            </div>
+        </div>
+        <div class="scroll-down-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+    <!-- 기업 소개 멘트 영역-->
+    <section id="introduction" class="section">
+        <img src="images/animate-dot1.png" class="animate-dot1" alt="dot1">
+        <img src="images/animate-dot1.png" class="animate-dot2" alt="dot2">
+        <span class="animate-dot3"></span>
+        <span class="animate-dot4"></span>
+        <div id="contents">
+            <span>[&nbsp;</span>
+            <p class="contents"></p>
+            <span>&nbsp;]</span>
+        </div>
+        <div id="center-text">
+            <h2>Correct judgement <br>for choice</h2>
+            <div class="intro-explain">
+                <h4>(주)성산씨엔에스는 선택을 위한 올바른 판단을 고민합니다.</h4>
+                <p>
+                    항상 새로운 것에 대한 도전은 더 나은 것, 꼭 필요한 것에 대한 선택이며, <br>
+                    그것은 저희로 하여금 끊임없이 연구하고 더 많은 것으로 향해 생각을 <br>
+                    갖도록 스스로를 자극하는 것입니다.        
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- 사업 소개 영역 -->
+    <section id="business-wrap" class="section">
+        <img src="images/animate-dot1.png" class="animate-dot5" alt="dot5">
+        <img src="images/animate-dot1.png" class="animate-dot6" alt="dot6">
+        <img src="images/animate=dot2.png" class="animate-dot7" alt="dot7">
+        <span class="animate-dot8"></span>
+        <img src="images/animate=dot2.png" class="animate-dot9" alt="dot9">
+        <h2>Our Business</h2>
+        <div id="business-content-wrap">
+            <div id="si-wrap">
+                <h3>System Integration</h3>
+                <div id="si-content">
+                    <img src="images/si.png" alt="si">
+                    <p>
+                        #SI 컨설팅 #S/W,H/W,DB 통합 <br>
+                        #맞춤형시스템통합 #기술지원
+                    </p>
+                </div>
+                <button>more</button>
+            </div>
+            <div id="os-wrap">
+                <h3>Outsourcing</h3>
+                <div id="os-content">
+                    <img src="images/os.png" alt="os">
+                    <p>
+                        #ITO컨설팅 #보안,재해복구서비스 <br>
+                        #인프라서비스 #애플리케이션서비스
+                    </p>
+                </div>
+                <button>more</button>
+            </div>
+            <div id="ic-wrap">
+                <h3>IT-Consulting</h3>
+                <div id="ic-content">
+                    <img src="images/ic.png" alt="ic">
+                    <p>
+                        #ISP #BPR #IT Outsourcing 컨설팅 <br>
+                        #재해복구컨설팅 #정보보안컨설팅
+                    </p>
+                </div>
+                <button>more</button>
+            </div>
+            <div id="sl-wrap">
+                <h3>Solution</h3>
+                <div id="sl-content">
+                    <img src="images/sl.png" alt="sl">
+                    <p>
+                        #Yes Care #SCMS #통합 도서일지 프로그램 <br>
+                        #영구임대보증금 지원관리 시스템
+                    </p>
+                </div>
+                <button>more</button>
+            </div>
+        </div>
+    </section>
+    <!-- 솔루션 영역 -->
+    <section id="solution" class="section">
+        <div class="slider-right">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+        </div>
+        <div class="slider-left">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+            <img src="images/slide-txt1.png" alt="slide-txt">
+        </div>
+        <h2>Our Solution</h2>
+        <span class="click1">click!<br>↓</span>
+        <!-- <span class="click2">click!<br>↓</span> -->
+        <div class="computer-mockup-container">
+            <img src="images/computer-mockup.png" alt="computer-mockup" class="computer-mockup">
+            <ul class="screen">
+                <li>
+                    <img src="images/yes-care.png" alt="yes-care">
+                    <span>
+                        <h2>YES CARE <br>(재가장기요양 업무관리 프로그램)</h3>
+                        <h4>요양센터의 업무를 신속 정확하게 효율적으로 <br>운영 할 수 있도록 지원하는 시스템</h4>
+                    </span>
+                    <p>▲ YES CARE (재가장기요양 업무관리 프로그램)</p>
+                </li>
+                <li>
+                    <img src="images/library-integration.png" alt="il">
+                    <span>
+                        <h2>Integrated Library log<br>(도서관 통합일지 솔루션)</h2>
+                        <h4>도서관 운영에 필요한 일지관리를 통합으로<br> 관리할 수 있도록 지원하는 시스템</h4>
+                    </span>
+                    <p>▲ 도서관 통합일지 솔루션</p>
+                </li>
+                <li>
+                    <img src="images/scms.png" alt="scms">
+                    <span>
+                        <h2>SCMS<br>(웹 콘텐츠 관리 시스템)</h2>
+                        <h4>
+                            전자정부표준프레임워크 기반의 <br>
+                            웹 콘텐츠관리시스템으로써 웹사이트 운영을 <br>
+                            효율적으로 관리할 수 있는 시스템
+                        </h4>
+                    </span>
+                    <p>▲ SCMS(웹 콘텐츠 관리 시스템)</p>
+                </li>
+                <li>
+                    <img src="images/permanent.png" alt="permanent">
+                    <span>
+                        <h2>Permanent Rental Deposit<br>(영구임대보증금 지원관리 시스템)</h2>
+                        <h4>
+                            영구임대주택 신규 입주자 중 <br>
+                            장애인 등 요건 해당 세대에 대하여 <br>
+                            임대보증금을 지원하는 업무관리 시스템
+                        </h4>
+                    </span>
+                    <p>▲ 영구임대보증금 지원관리 시스템</p>
+                </li>
+            </ul>
+            <div id="prev-btn" class="nav-btn"><img src="images/prev-btn.png" alt="prev"></div>
+            <div id="next-btn" class="nav-btn"><img src="images/next-btn.png" alt="next"></div>
+        </div>
+        <button id="sl-btn">more →</button>
+    </section>
+    <!-- Contact 영역 -->
+    <section id="contact-wrap" class="section">
+        <h2>Contact us</h2>
+        <div id="profile">
+            <div class="profile-left">
+                <h3><span>SUNGSAN C&S</span> <br>Company Introduction</h3>
+                <p>가치를 통해 신뢰를 받는 IT 전문기술 (주)성산씨엔에스의 회사소개서입니다.</p>
+            </div>
+            <button>Download <span><i class="fa-regular fa-circle-down"></i></span></button>
+        </div>
+        <ul>
+            <li>
+                <h3>Way to come</h3>
+                <span>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>성산씨엔에스의 위치와 연락처를 안내해드립니다.</p>
+                </span>
+            </li>
+            <li>
+                <h3>Recruit</h3>
+                <span>
+                    <i class="fa-solid fa-user-tie"></i>
+                    <p>여러분의 꿈과 열정, 성산씨엔에스가 함께 합니다.</p>
+                </span>
+            </li>
+            <li>
+                <h3>News</h3>
+                <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <p>성산씨엔에스의 최신 소식을 알려드립니다.</p>
+                </span>
+            </li>
+        </ul> 
+    </section>
+    <!-- 푸터 영역 -->
+    <section id="footer-wrap" class="section">
+        <div id="footer-content">
+            <div id="footer-logo">
+                <a href="#"><img src="images/main-logo.png" alt="footer-logo"></a>
+            </div>
+            <div id="footer-center">
+                <ul>
+                    <li><a href="#">회사소개</a></li>
+                    <span>|</span>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <span>|</span>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+                <p>광주광역시 서구 대남대로 465 상공회의소 빌딩 503호</p>
+                <div class="contact">
+                    <p>Tel.062-676-9960</p>
+                    <p>Tel.062-646-4554</p> 
+                </div>
+            </div>
+            <ul id="site-map">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">BUSINESS</a></li>
+                <li><a href="#">RECRUIT</a></li>
+                <li><a href="#">NEWS</a></li>
+            </ul>
+        </div>
+        <p id="copy-right">COPYRIGHT ©2024 SSCNS ALL RIGHTS RESERVED</p>
+    </section>
+</body>
+</html>
