@@ -126,10 +126,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var scrollPosition = window.scrollY;
         // 애니메이션을 시작할 위치
         var triggerPosition = document.getElementById('center-text').offsetTop - window.innerHeight;
+        var triggerPosition2 = document.querySelectorAll('#business-wrap > h2').offsetTop - window.innerHeight;
+        var triggerPosition3s = document.getElementById('business-content-wrap').offsetTop - window.innerHeight;
     
         // 인재채용 영역 원 확대 애니메이션
         if (scrollPosition > triggerPosition) {
             document.getElementById('center-text').classList.add('animates');
+        }
+        else if (scrollPosition > triggerPosition2) {
+            document.querySelectorAll('#business-wrap > h2').classList.add('animates');
+        }
+        else if (scrollPosition > triggerPosition3) {
+            document.getElementById('business-content-wrap').classList.add('animates');
         }
     });
     
