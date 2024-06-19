@@ -15,7 +15,7 @@ body {
     z-index: 9999;
 }
 .animates {
-    animation: fadeInUp 1s ease-in-out  ; /* 1초 동안 위로 나타나는 애니메이션 */
+    animation: fadeInUp 1s ease-out; /* 1초 동안 위로 나타나는 애니메이션 */
     transition: opacity 0.5s ease; /* opacity 변경 시 부드럽게 전환되도록 */
 }
 @keyframes fadeInUp {
@@ -25,7 +25,7 @@ body {
     }
     100% {
         opacity: 1;
-        transform: translateY(0); /* 요소를 위로 이동하여 나타냄 */
+        transform: translateY(-125px); /* 요소를 위로 이동하여 나타냄 */
     }
 }
 /* 헤더 영역 */
