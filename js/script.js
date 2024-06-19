@@ -95,37 +95,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 // 솔루션 영역 요소 변환 애니메이션
-// document.addEventListener('DOMContentLoaded', (event) => {
-//     const carousel = document.querySelector('.carousel');
-//     const items = carousel.querySelectorAll('li');
-//     const prevBtn = document.getElementById('prev-btn');
-//     const nextBtn = document.getElementById('next-btn');
-
-//     let currentIndex = 0;
-
-//     function updateCarousel() {
-//         const offset = -currentIndex * 1600; // Adjust width as needed
-//         items.forEach((item) => {
-//             item.style.transform = `translateX(${offset}px)`;
-//         });
-//     }
-
-//     prevBtn.addEventListener('click', () => {
-//         if (currentIndex > 0) {
-//             currentIndex--;
-//             updateCarousel();
-//         }
-//     });
-
-//     nextBtn.addEventListener('click', () => {
-//         if (currentIndex < items.length - 1) {
-//             currentIndex++;
-//             updateCarousel();
-//         }
-//     });
-
-// });
-// script.js
 document.addEventListener('DOMContentLoaded', (event) => {
     let currentIndex = 0;
     const slides = document.querySelectorAll('.screen li');
@@ -148,4 +117,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Initialize the first slide as active
     slides[currentIndex].classList.add('active');
+});
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    window.addEventListener('scroll', function() {
+        // 스크롤 위치
+        var scrollPosition = window.scrollY;
+        // 애니메이션을 시작할 위치
+        var triggerPosition = document.getElementById('center-text').offsetTop - window.innerHeight;
+    
+        // 인재채용 영역 원 확대 애니메이션
+        if (scrollPosition > triggerPosition) {
+            document.getElementById('center-text').classList.add('animates');
+        }
+    });
+    
 });

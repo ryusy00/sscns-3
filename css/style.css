@@ -14,6 +14,20 @@ body {
     transition: all 0.05s ease;
     z-index: 9999;
 }
+.animates {
+    animation: fadeInUp 1s ease-out; /* 1초 동안 위로 나타나는 애니메이션 */
+    transition: opacity 0.5s ease; /* opacity 변경 시 부드럽게 전환되도록 */
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* 요소를 아래로 숨김 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 요소를 위로 이동하여 나타냄 */
+    }
+}
 /* 헤더 영역 */
 #topBox {
     width: 100vw;
@@ -504,6 +518,8 @@ body {
     width: 100%;
     top: 55%;
     transform: translateY(-55%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 #center-text > h2 {
     font-size: 75px;
