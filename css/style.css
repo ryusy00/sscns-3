@@ -15,13 +15,13 @@ body {
     z-index: 9999;
 }
 .animates {
-    animation: fadeInUp 2s ease-out; /* 1초 동안 위로 나타나는 애니메이션 */
-    transition: opacity 0.5s ease; /* opacity 변경 시 부드럽게 전환되도록 */
+    animation: fadeInUp 2.5s ease-out; /* 1초 동안 위로 나타나는 애니메이션 */
+    transition: opacity 1s ease; /* opacity 변경 시 부드럽게 전환되도록 */
 }
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(100px); /* 요소를 아래로 숨김 */
+        transform: translateY(80px); /* 요소를 아래로 숨김 */
     }
     100% {
         opacity: 1;
