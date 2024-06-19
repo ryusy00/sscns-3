@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     slides[currentIndex].classList.add('active');
 });
 
-
+// 각 영역별 스크롤 시 fadeinUpdown 애니메이션
 document.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('scroll', function() {
         // 스크롤 위치
