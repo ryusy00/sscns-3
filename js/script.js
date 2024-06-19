@@ -126,18 +126,27 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var scrollPosition = window.scrollY;
         // 애니메이션을 시작할 위치
         var triggerPosition = document.getElementById('center-text').offsetTop - window.innerHeight;
-        var triggerPosition2 = document.querySelectorAll('#business-wrap > h2').offsetTop - window.innerHeight;
-        var triggerPosition3s = document.getElementById('business-content-wrap').offsetTop - window.innerHeight;
+        var triggerPosition2 = document.getElementById('business-wrap').offsetTop - window.innerHeight;
+        var triggerPosition3 = document.getElementById('solution').offsetTop - window.innerHeight;
+        var triggerPosition4 = document.getElementById('contact-wrap').offsetTop - window.innerHeight;
+        var triggerPosition5 = document.getElementById('contact-content').offsetTop - window.innerHeight;
     
-        // 인재채용 영역 원 확대 애니메이션
         if (scrollPosition > triggerPosition) {
             document.getElementById('center-text').classList.add('animates');
         }
-        else if (scrollPosition > triggerPosition2) {
-            document.querySelectorAll('#business-wrap > h2').classList.add('animates');
+        if (scrollPosition > triggerPosition2) {
+            document.querySelector('#business-wrap > h2').classList.add('animated');
+            document.getElementById('business-content-wrap').classList.add('animated');
         }
-        else if (scrollPosition > triggerPosition3) {
-            document.getElementById('business-content-wrap').classList.add('animates');
+        if (scrollPosition > triggerPosition3) {
+            document.querySelector('#solution > h2').classList.add('animated');
+        }
+        if (scrollPosition > triggerPosition4) {
+            document.querySelector('#contact-wrap > h2').classList.add('animated');
+            document.getElementById('profile').classList.add('animated');
+        }
+        if (scrollPosition > triggerPosition5) {
+            document.getElementById('contact-content').classList.add('animated2');
         }
     });
     
