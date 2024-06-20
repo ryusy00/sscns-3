@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var triggerPosition2 = document.getElementById('business-wrap').offsetTop - window.innerHeight;
         var triggerPosition3 = document.getElementById('solution').offsetTop - window.innerHeight;
         // var triggerPosition4 = document.getElementById('contact-wrap').offsetTop - window.innerHeight;
-        var triggerPosition5 = document.getElementById('contact-content').offsetTop - window.innerHeight;
+        var triggerPosition5 = document.getElementById('profile').offsetTop - window.innerHeight;
     
         if (scrollPosition > triggerPosition) {
             document.getElementById('center-text').classList.add('animates');
