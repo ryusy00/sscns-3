@@ -128,8 +128,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         var triggerPosition = document.getElementById('center-text').offsetTop - window.innerHeight;
         var triggerPosition2 = document.getElementById('business-wrap').offsetTop - window.innerHeight;
         var triggerPosition3 = document.getElementById('solution').offsetTop - window.innerHeight;
-        // var triggerPosition4 = document.getElementById('contact-wrap').offsetTop - window.innerHeight;
-        var triggerPosition5 = document.getElementById('profile').offsetTop - window.innerHeight;
+        var triggerPosition4 = document.getElementById('contact-wrap').offsetTop - window.innerHeight;
     
         if (scrollPosition > triggerPosition) {
             document.getElementById('center-text').classList.add('animates');
@@ -141,12 +140,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         if (scrollPosition > triggerPosition3) {
             document.querySelector('#solution > h2').classList.add('animated');
         }
-        // if (scrollPosition > triggerPosition4) {
-        // }
-        if (scrollPosition > triggerPosition5) {
+        if (scrollPosition > triggerPosition4) {
             document.querySelector('#contact-wrap > h2').classList.add('animated');
             document.getElementById('profile').classList.add('animated');
-            document.getElementById('contact-content').classList.add('animated');
+            document.getElementById('contact-content').classList.add('animated2');
         }
     });
     
