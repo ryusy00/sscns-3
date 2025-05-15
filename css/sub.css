@@ -1,0 +1,5372 @@
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    margin: 0 auto;
+    overflow-x: hidden;
+    background-color: #1300A5;
+    width: 100%;
+}
+.animate {
+    animation: fadeInUp 1s ease-out; /* 1초 동안 위로 나타나는 애니메이션 */
+    transition: opacity 0.5s ease; /* opacity 변경 시 부드럽게 전환되도록 */
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px); /* 요소를 아래로 숨김 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* 요소를 위로 이동하여 나타냄 */
+    }
+}
+.fadeInUp {
+    animation: fadeInUp 1s ease-out;
+    transition: opacity 0.5s ease; /* opacity 변경 시 부드럽게 전환되도록 */
+}
+/* 헤더 영역 */
+#topBox2 {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all 0.5s;
+    height: 100px;
+    background-color: #1300a57f;
+}
+#topBox3 {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all 0.5s;
+    height: 100px;
+    background-color: #2357ab6d;
+}
+#menu2 {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 40px;
+    transition: opacity 0.5s ease;
+}
+#menu2 > li {
+    width: 120px;
+    position: relative;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+}
+#menu2 > li:hover > a {
+    color: #fff;
+    text-decoration: underline;
+}
+.sub1 {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    display: none;
+}
+.sub1 > li {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    background-color: #fff;
+}
+.sub1 > li > a {
+    text-decoration: none;
+    color: #000;
+}
+.sub1 > li:hover {
+    background-color: #92FFF1;
+}
+#menu2 > li > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* 공동 title */
+#g-title > h2, #h-title > h2, #r-title > h2, #b-title > h2, 
+#i-title > h2, #o-title > h2, #c-title > h2, #recruit-title > h2,  
+#notice-title > h2, #sitemap-title > h2 {
+	font-size: 4rem;
+	font-weight: bold;
+    font-style: italic;
+    font-family: "Inconsolata", monospace;
+}
+/* 회사소개 페이지 */
+#greeting {
+    width: 100%;
+    height: 1250px;
+    position: relative;
+    overflow: hidden;
+}
+.ani-dot1 {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    animation: upAndDown 1.7s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.ani-dot2 {
+    position: absolute;
+    top: 25%;
+    right: 12%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.ani-dot3 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    animation: upAndDown 2.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.ani-dot4 {
+    position: absolute;
+    bottom: 8%;
+    right: 30%;
+    animation: upAndDown 2s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+#g-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.g-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 32ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.g-typing::before {
+    content: 'Create new value for your IT business.';
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; /* 테두리를 포함하여 크기 계산 */
+    animation: typing 3.5s steps(38, end), blink-caret .90s step-end;
+}
+/* 타이핑 애니메이션 */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 39ch; }
+}
+/* 캐럿 깜박임 애니메이션 */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+#g-content {
+    max-width: 75%;
+    height: 800px;
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+#g-box {
+    width: 680px;
+    height: 760px;
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+#g-title, #g-box, #d-box {
+    opacity: 0; /* 초기 상태에서 숨김 */
+    transition: opacity 1s ease-in-out; /* 페이드인 애니메이션 설정 */
+}
+
+#g-title.animate, #g-box.animate, #d-box.animate {
+    opacity: 1; /* 애니메이션 적용 시 보이게 */
+}
+.g-topBox {
+    width: 99%;
+    height: 30px;
+    background-color: #1300A5;
+    margin: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.g-topBox-title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+#btn-box {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+#btn-box > p {
+    width: 26px;
+    height: 26px;
+    background-color: #bfc1c0 ;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-right: 1px;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+#btn-box > p:nth-child(3){
+    margin-right: 2px;
+}
+.g-select {
+    display: flex;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.g-select > li {
+    margin-right: 10px;
+}
+.g-select span {
+    text-decoration: underline;
+}
+.g-txt {
+    width: 99%;
+    height: 89.5%;
+    margin: 0.5%;
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    padding-top: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.g-txt > span {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+#d-box {
+    width: 600px;
+    height: 300px;
+    background-color: #bfc1c0;
+    margin-top: 10%;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    /* z-index: 100; */
+}
+.d-topBox {
+    width: 99%;
+    height: 30px;
+    background-color: #1300A5;
+    margin: 0.5%;
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+.d-topBox > p {
+    width: 26px;
+    height: 26px;
+    background-color: #bfc1c0 ;
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin: 1px;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+.d-topBox-title {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+.d-content {
+    width: 85%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+.d-content-txt {
+    margin-left: 28px;
+    font-family: 'NeoDunggeunmo';
+}
+.d-content-txt > p {
+    font-size: 1.6rem;
+    line-height: 30px;
+}
+.d-content-txt > h4 {
+    font-size: 0.95rem;
+    margin-top: 10px;
+    color: #444;
+}
+.d-btn {
+    width: 27%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.d-btn > button {
+    width: 160px;
+    height: 40px;
+    background-color: #bfc1c0;
+    border: 2px solid #333;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    color: #222;
+}
+.d-btn > button:hover {
+    background-color: #333;
+    color: #fff;
+}
+.d-btn > button:nth-child(1){
+    margin-right: 30px;
+}
+
+
+/* 회사연혁 페이지 */
+#history-wrap {
+    width: 100%;
+    height: 2400px;
+    position: relative;
+    overflow: hidden;
+}
+.dot1 {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    animation: upAndDown 1.7s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.dot2 {
+    position: absolute;
+    top: 25%;
+    right: 12%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.dot3 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    animation: upAndDown 2.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.dot4 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    bottom: 25%;
+    right: 30%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.dot5 {
+    position: absolute;
+    top: 47%;
+    left: 20%;
+    animation: upAndDown 2s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+#h-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.h-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 40ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.h-typing::before {
+    content: 'Create new value for your IT business.';
+    display: inline-block;
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; 
+    animation: h-typing 3.5s steps(40, end), blink-caret .90s step-end;
+}
+@keyframes h-typing {
+    from { width: 0; }
+    to { width: 41ch; }
+}
+.stairs {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.person1, .person2, .person3 {
+    z-index: 3;
+    position: absolute;
+}
+.person, .stairs {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.person1 {
+    top: 31%;
+    left: 53%;
+}
+.person2 {
+    top: 55%;
+    left: 34%;
+}
+.person3 {
+	bottom: 8.5%;
+    left: 56%;
+}
+.history1, .history2, .history3, .history4 {
+    z-index: 10;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    white-space: nowrap;
+}
+.history1 > h3, .history2 > h3, 
+.history3 > h3, .history4 > h3 {
+    font-family: 'NeoDunggeunmo';
+    font-size: 2.5rem;
+    color: #fff;
+}
+.history1 > ul, .history2 > ul,
+.history3 > ul, .history4 > ul {
+    font-size: 1.12rem;
+    color: #e7e7e7;
+    padding-top: 10px;
+}
+.history1 {
+	position: absolute;
+    top: 22%;
+    left: 7%;
+}
+.history2 {
+	position: absolute;
+	top: 39%;
+    right: 4%;
+}
+.history3 {
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+}
+.history4 {
+    position: absolute;
+    bottom: 8%;
+    right: 8%;
+}
+
+
+
+/* 오시는길 페이지 */
+#road-wrap {
+    width: 100%;
+    height: 1350px;
+    position: relative;
+    overflow: hidden;
+}
+.r-dot1 {
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+    animation: upAndDown 1.7s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.r-dot2 {
+    position: absolute;
+    top: 17%;
+    right: 15%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.r-dot3 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    animation: upAndDown 2.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.r-dot4 {
+    position: absolute;
+    bottom: 8%;
+    right: 15%;
+    animation: upAndDown 2s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+#r-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.r-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 39ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.r-typing::before {
+    content: 'Create new value for your IT business.';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; 
+    animation: r-typing 3.5s steps(38, end), blink-caret .90s step-end;
+}
+@keyframes r-typing {
+    from { width: 0; }
+    to { width: 39ch; }
+}
+#l-box {
+	width: 800px;
+	height: 600px;
+	 background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+#l-box img{
+	padding-right: 5px;
+}
+#map {
+	position:absolute;
+	top: 11%;
+    left: 0.4%;
+    width: 99%;
+    height: 528px;
+	border: 1px solid #333;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+	box-sizing: initial;
+}
+#location-wrap {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: flex;
+}
+#r-info {
+	width: 50%;
+	padding-left: 6%;
+	padding-top: 1%;
+}
+.road-info {
+    color: #fff;
+    padding-top: 1.5%;
+    
+}
+.road-info > ul > li {
+    margin-bottom: 6%;
+}
+.road-info > ul > li > h3 {
+    font-size: 1.5rem;
+    font-family: 'NeoDunggeunmo';
+    padding-bottom: 10px;
+}
+.road-info > ul > li > h3 > span {
+    padding-right: 15px;
+}
+.road-info > ul > li > p {
+    padding-left: 10px;
+	font-size: 1rem;
+    color: #e7e7e7;
+}
+.animated-title {
+    font-family: 'NeoDunggeunmo';
+    font-size: 70px;  
+    width: 100%;
+    max-width:100%; 
+    margin-top: 100px;
+    height: 90px;
+    line-height: 60px;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.content {
+    color: #333;
+}
+.animated-title .track {
+    color: white;
+    position: absolute; 
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 35s linear infinite; 
+}
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+#transport-wrap {
+    margin-top: 16%;
+}
+#transport-wrap > h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'NeoDunggeunmo';
+}
+#transport-wrap > h3 > span {
+	font-size: 1.5rem;
+    padding-right: 15px;
+}
+.transport {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 5px;
+}
+.bus, .subway {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.bus > i, .subway > i {
+    font-size: 40px;
+    padding-right: 20px;
+	width: 70px;
+}
+.subway > i {
+	padding-left: 6px;
+}
+.transport > div > div > h4 {
+    font-family: 'NeoDunggeunmo';
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+.transport > div > div > p {
+    font-size: 0.9rem;
+    padding-top: 7px;
+    color: #e7e7e7;
+    white-space: nowrap;
+}
+.subway {
+    margin-left: 5%;
+}
+
+
+/* 사업소개 페이지 */
+#business-wrap {
+    width: 100%;
+    height: 1400px;
+    position: relative;
+}
+.b-dot1 {
+    position: absolute;
+    bottom: 20%;
+    left: 7%;
+    animation: upAndDown 1.7s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.b-dot2 {
+    position: absolute;
+    top: 2%;
+    right: 15%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.b-dot3 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    animation: upAndDown 2.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.b-dot4 {
+    position: absolute;
+    bottom: 12%;
+    right: 30%;
+    animation: upAndDown 2s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+#b-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.b-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 44ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.b-typing::before {
+    content: 'SI • Outsourcing • IT Consulting • Solution';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; 
+    animation: b-typing 3.5s steps(43, end), blink-caret .90s step-end;
+}
+@keyframes b-typing {
+    from { width: 0; }
+    to { width: 44ch; }
+}
+#business-box {
+    margin-top: 5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #bfc1c0;
+    color: #333;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+	height: 43%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+#b-topBox {
+    width: 99.6%;
+    margin: 0.2%;
+    background-color: #1300A5;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    height: 40px;
+    line-height: 40px;
+    font-size: 21px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+#b-topBox > p {
+    padding-left: 45%;
+}
+#b-topBox > div {
+    font-weight: 600;
+    font-size: 25px;
+    border: 1.5px solid #222;
+    width: 35px;
+    height: 35px;
+    margin-top: 1.5px;
+    margin-right: 1px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #bfc1c0;
+    color: #333;
+}
+.b-content {
+    display: flex;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.read-more1, .read-more2,
+.read-more3, .read-more4 {
+	position: absolute;
+	bottom: 3%;
+    background-color: #bfc1c0;
+    border: 2.5px solid #333;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-family: 'NeoDunggeunmo';
+	font-size: 1.3rem;
+    width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #222;
+}
+.b-imgBox {
+    width: 50%;	
+}
+.b-content img {
+    border: 2.5px solid #333;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-top: 5%;
+    width: 100%;
+}
+.b-content-txt {
+	width: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #333;
+    font-family: 'NeoDunggeunmo';
+}
+.b-content-txt > h2 {
+    font-size: 2.5rem;
+}
+.b-content-txt > p {
+    margin-top: 7%;
+    line-height: 40px;
+    font-size: 1.35rem;
+}
+.read-more1:hover, .read-more2:hover,
+.read-more4:hover, .read-more4:hover {
+    background-color: #333;
+    color: #fff;
+}
+.content-wrap {
+    display: none;
+}
+#b-control {
+    max-width: 70%;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#b-control > p {
+    font-size: 1rem;
+    color: #e7e7e7;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.content-wrap.active {
+    display: block;
+}
+.control-wrap ul {
+    width: 40%;
+    border-radius: 10px;
+    border: 2.5px solid #333;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background-color: #bfc1c0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    padding: 5px;
+}
+.control-wrap li {
+    margin: 5px;
+    padding: 0;
+    width: 100%;
+}
+.control-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 8px;
+    background-color: #fff;
+    color: #333;
+    border: 2.5px solid #333;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+.control-button > img {
+    width: 60%;
+}
+.control-wrap > ul > li:nth-child(1) > button > img {
+	padding-top: 5px;
+    width: 70%;
+}
+.control-wrap > ul > li:nth-child(2) > button > img {
+    width: 50%;
+    padding-top: 6px;
+}
+.control-button > p {
+    font-weight: 550;
+}
+.control-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+.control-button.active {
+    background-color: #333; /* 원하는 배경색으로 변경 */
+    color: white;
+}
+
+
+
+/* 시스템통합 페이지 */
+#integration-wrap {
+    background-image: url('../images/24/sub-img/business-detail.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1550px; 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+#integration-wrap > a {
+	z-index: 100;
+}
+#integration-wrap > a:nth-child(1){
+	width: 80px;
+	height: 80px;
+	position: absolute;   
+    top: 20%;
+    left: 10%;
+    text-decoration: none;
+}
+.si-icon > img {
+	padding-bottom:8px;
+}
+.si-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+#integration-wrap > a:nth-child(2) {
+	width: 80px;
+	height: 80px;
+	position: absolute;  
+	top: 14%;
+	right: 10%;
+	text-decoration: none;
+}
+#integration-wrap > a:nth-child(3) {
+	width: 80px;
+	height: 80px;
+	position: absolute;  
+	top: 23%;
+	right: 10%;
+	text-decoration: none;
+}
+.file-icon1, .file-icon2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+.file-icon1 > img, .file-icon2 > img {
+	padding-bottom: 8px;
+}
+#i-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.i-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 52ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.i-typing::before {
+    content: 'Integrated systems including H•W,S•W and solutions.';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.);
+    box-sizing: border-box; 
+    animation: i-typing 3.5s steps(51, end), blink-caret .90s step-end;
+}
+@keyframes i-typing {
+    from { width: 0; }
+    to { width: 52ch; }
+}
+#i-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+#si-box, #support-box, #custom-box, #db-box {
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+    font-size: 1rem;
+    opacity: 0; /* 초기 투명도 */
+    transition: opacity 1s ease-in-out; /* 페이드 인 애니메이션 */
+}
+#si-box {
+    width: 360px;
+    height: 280px;
+    margin-top: 7%;
+    margin-left: 15%;
+}
+#support-box {
+    width: 380px;
+    height: 350px;
+    margin-top: 10%;
+    margin-left: 7%;
+}
+#custom-box {
+    width: 380px;
+    height: 200px;
+    margin-left: 8%;
+}   
+#db-box {
+    width: 380px;
+    height: 230px;
+    margin-left: 35%;
+    margin-top: -2%;
+}   
+#si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    margin: 0.5%;
+    background-color: #1300A5;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1rem;
+}
+.i-topBox-title {
+    display: flex;
+}
+.i-topBox-title > span > img {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+}
+.si-txt, .support-txt , .custom-txt, .db-txt {
+    width: 99%;
+    margin: 0.5%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.si-txt {
+    height: 76.5%;
+    padding-top: 30px;
+    padding-left: 35px;
+}
+.support-txt {
+    padding-top: 35px;
+    padding-left: 40px;
+    height: 81%;
+}
+.custom-txt {
+    padding: 50px;
+    height: 67%;
+}
+.db-txt {
+    padding-top: 40px;
+    padding-left: 45px;
+    height: 71%;
+}
+
+
+/* 아웃소싱 페이지 */
+#outsourcing-wrap {
+    background-image: url('../images/24/sub-img/business-detail.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1550px; 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+#oursourcing-wrap > a {
+	z-index:100;
+}
+#outsourcing-wrap > a > div > img {
+	padding-bottom: 8px
+}
+#outsourcing-wrap > a:nth-child(1){
+	position: absolute;   
+    top: 10%;
+    left: 8%;
+    text-decoration:none;
+}
+.os-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+#outsourcing-wrap > a:nth-child(2) {
+	position: absolute;   
+    right: 10%;
+    top: 14%;
+    text-decoration:none;
+}
+#outsourcing-wrap > a:nth-child(3) {
+	position: absolute;   
+    right: 9%;
+    top: 23%;
+    text-decoration:none;
+}
+.file-icon3, .file-icon4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+#o-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.o-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 85ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.o-typing::before {
+    content: 'Establishment of informatization strategies, software development, system diagnosis.';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box; 
+    animation: o-typing 6s steps(85, end), blink-caret .90s step-end;
+}
+@keyframes o-typing {
+    from { width: 0; }
+    to { width: 84ch; }
+}
+#o-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+#ito-box, #infra-box, #app-box, #se-box {
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+    font-size: 18px;
+    opacity: 0; /* 초기 투명도 */
+    transition: opacity 1s ease-in-out; /* 페이드 인 애니메이션 */
+}
+#ito-box {
+	width: 26%;
+    height: 75.5%;
+    margin-top: 3%;
+}
+#infra-box {
+    width: 24%;
+	height: 72.5%;
+    margin-top: 8%;
+    margin-left: -1%;
+}
+#app-box {
+    width: 24%;
+    height: 64%;
+    margin-top: 5%;
+    margin-left: -1.5%;
+}
+#se-box {
+    width: 28%;
+    height: 76%;
+    margin-top: 10%;
+    margin-left: -2%;
+}
+.img-container {
+    overflow: hidden; /* 이미지가 부모 요소를 벗어나지 않도록 함 */
+    width: 100%; /* 부모 요소의 너비에 맞춤 */
+    width: 99%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border: 2px solid #333;
+}
+.zoom-img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+.img-container:hover .zoom-img {
+    transform: scale(1.1);
+}
+#ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    margin: 0.5%;
+    background-color: #1300A5;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.05rem;
+}
+.os-topBox-title {
+    display: flex;
+}
+.os-topBox-title > span > img {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+}
+.ito-txt, .infra-txt, .app-txt, .se-txt {
+    margin-top: 2%;
+    width: 99%;
+    margin: 0.5%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.06rem;
+    font-weight: 500;
+    padding: 20px 15px;
+}
+
+
+/* IT컨설팅 페이지 */
+#consult-wrap {
+    background-image: url('../images/24/sub-img/business-detail.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 1550px; 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+#consult-wrap > a {
+	z-index: 100;
+}
+#consult-wrap > a:nth-child(1){
+	width: 103px;
+	height: 80px;
+	position: absolute;   
+    top: 20%;
+    left: 10%;
+    text-decoration: none;
+}
+.ic-icon > img {
+	padding-bottom:8px;
+}
+.ic-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+#consult-wrap > a:nth-child(2) {
+	width: 80px;
+	height: 80px;
+	position: absolute;  
+	top: 14%;
+	right: 10%;
+	text-decoration: none;
+}
+#consult-wrap > a:nth-child(3) {
+	width: 80px;
+	height: 80px;
+	position: absolute;  
+	top: 23%;
+	right: 10%;
+	text-decoration: none;
+}
+.file-icon5, .file-icon6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 500;
+    color: #222;
+    cursor: pointer;
+}
+.file-icon5 > img, .file-icon6 > img {
+	padding-bottom: 8px;
+}
+#c-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.c-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 72ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.c-typing::before {
+    content: 'Provides IT consulting such as process innovation and IT architecture.';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box; 
+    animation: c-typing 6s steps(72, end), blink-caret .90s step-end;
+}
+@keyframes c-typing {
+    from { width: 0; }
+    to { width: 71ch; }
+}
+#c-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+#isp-box, #bpr-box, #secure-box, #recover-box {
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+    font-size: 18px;
+    opacity: 0; /* 초기 투명도 */
+    transition: opacity 1s ease-in-out; /* 페이드 인 애니메이션 */
+}
+#isp-box {
+    width: 420px;
+    height: 280px;
+    margin-top: 7%;
+    margin-left: 15%;
+}
+#bpr-box {
+    width: 550px;
+    height: 280px;
+    margin-top: 10%;
+    margin-left: 7%;
+}
+#secure-box {
+    width: 400px;
+    height: 230px;
+    margin-left: 8%;
+}   
+#recover-box {
+    width: 420px;
+    height: 230px;
+    margin-left: 30%;
+    margin-top: -1%;
+}   
+#isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox, #cloud-topBox {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    margin: 0.5%;
+    background-color: #1300A5;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 17px;
+}
+.i-topBox-title {
+    display: flex;
+}
+.i-topBox-title > span > img {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 6px;
+}
+.isp-txt, .bpr-txt , .secure-txt, .recover-txt {
+    width: 99%;
+    margin: 0.5%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.isp-txt {
+    height: 76.5%;
+    padding-top: 45px;
+    padding-left: 35px;
+}
+.bpr-txt {
+    padding-top: 35px;
+    padding-left: 40px;
+    height: 75%;
+}
+.secure-txt {
+    padding-top: 35px;
+    padding-left: 50px;
+    height: 71%;
+}
+.recover-txt {
+    padding-top: 40px;
+    padding-left: 30px;
+    height: 71%;
+}
+
+
+/* 클라우드 페이지 */
+#cloud-wrap {
+	width: 100%;
+	height: 3100px;
+	position: relative;
+}
+#cloud-title {
+	width: 100%;
+	margin-top: 10%;
+	text-align: center;
+	color: #fff;
+}
+#cloud-title > h2 {
+	font-size: 55px;
+	font-weight: bold;
+	font-style: italic;
+	font-family: "Inconsolata", monospace;
+}
+.cloud-typing {
+	display: inline-block;
+	font-size: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+	width: 89ch;
+	margin-top: 30px;
+	opacity: 60%;
+}
+.cloud-typing::before {
+	content: 'We support multi-cloud service construction strategies tailored to each customer’s needs.';
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	z-index: 20;
+	font-family: 'neodunggeunmo';
+	color: white;
+	height: 40px;
+	border-right: 2px solid rgba(255,255,255,0.7);
+	box-sizing: border-box;
+	animation: cloud-typing 6s steps(89, end), blink-caret .90s step-end;
+}
+/* 타이핑 애니메이션 */
+@keyframes cloud-typing {
+    from { width: 0; }
+    to { width: 89ch; }
+}
+#cloud-top {
+    max-width: 80%;
+    height: 500px;
+    margin-top: 7%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cloud-box {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.select {margin-left: 10px;}
+.cloud-define {
+	display: flex;
+	align-items: center;
+	width: 99%;
+	height: 83%;
+    margin: 0.5%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.cloud-define > p {
+	margin-left: 6%;
+}
+.cloud-define > img {
+	margin-left: 5%;
+}
+.animated-title2,
+.animated-title3 {
+	font-family: 'NeoDunggeunmo';
+	font-size: 70px;
+	width: 100%;
+	margin-top: 100px;
+	height: 90px;
+	overflow-x: hidden;
+}
+.content2 {
+	color: #9ad8ff;
+}
+.content3 {
+	color: #9affdf;
+}
+.animated-title2 .track {
+    color: white;
+    position: absolute; 
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 20s linear infinite; 
+}
+.animated-title3 .track {
+    color: white;
+    position: absolute; 
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee2 40s linear infinite; 
+}
+@keyframes marquee {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+@keyframes marquee2 {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+#cloud-middle {
+	width: 70%;
+	height: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	margin-top: 7%;
+}
+
+#cloud-middle > h2,
+#cloud-bottom > h2 {
+	color: white;
+	font-family: 'NeoDunggeunmo';
+	font-size: 1.5rem;
+	display: flex;
+	align-items: center;
+	width: 27%;
+	height: 60px;
+	border: 2px solid #fff;
+	border-radius: 15px;
+}
+#cloud-bottom > h2 {
+	letter-spacing: 3px;
+	font-size: 1.8rem;
+	width: 21%
+}
+#cloud-middle > h2 > img,
+#cloud-bottom > h2 > img {
+	padding-left: 10px;
+	padding-right: 15px;
+}
+#main-service {
+	display: flex;
+	align-items: center;
+	width: 99%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 93%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.m-service {
+	width: 95%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: auto;
+	margin-top: 5%;
+}
+.m-service > li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+	height: 34%;
+	position: relative;
+}
+.m-service > li > h3 {
+	padding-top: 15px;
+}
+.m-service > li > span {
+	display: inline-block;
+	opacity:0;
+	transition: opacity 0.2s ease-in;
+	position: absolute;
+	top: 90px;
+	left: 25px;
+	background-color: rgba(0,0,0,0.6);
+	color: #fff;
+	border-radius: 10px;
+	white-space: nowrap;
+	padding: 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	z-index: 10;
+	font-size: 1.1rem;
+}
+.m-service > li:hover > span{
+	opacity: 1;
+}
+#cloud-bottom {
+	width: 70%;
+	height: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	margin-top: 7%;
+}
+#advantage-wrap {
+	margin-top: 3%;
+	width: 100%;
+}
+.advantage {
+	display: flex;
+	justify-content: space-around;
+}
+.advantage > li {
+	color: #fff;
+	width: 24%;
+	height: 300px;
+	border: 2px solid #fff;
+	border-radius: 15px;
+	text-align: center;
+	position: relative;
+}
+.advantage > li > h3 {
+	position: absolute;
+	top:50%; left:50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.3rem;
+	font-family: 'NeoDunggeunmo';
+	white-space: nowrap;
+}
+.advantage > li > span {
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	white-space: nowrap;
+	transition: opacity 0.3s ease-in;
+	font-family: 'NeoDunggeunmo';
+	font-size: 1.1rem;
+}
+.advantage > li > span > img {
+	padding-bottom: 10px;
+}
+.advantage > li:hover {
+	background-color: rgba(255,255,255,0.7);
+	color: #222;
+}
+.advantage > li:hover > h3 {
+	opacity: 0;
+}
+.advantage > li:hover > span {
+	opacity: 1;
+}
+
+
+/* 인재채용 페이지 */
+#recruit-wrap {
+    width: 100%;
+    height: 1700px;
+    position: relative;
+    overflow: hidden;
+}
+#recruit-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.recruit-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 45ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.recruit-typing::before {
+    content: 'We select excellent talents based on talent awards.';
+    display: inline-block;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    box-sizing: border-box; 
+    animation: recruit-typing 3.5s steps(45, end), blink-caret .90s step-end;
+}
+@keyframes recruit-typing {
+    from { width: 0; }
+    to { width: 44ch; }
+}
+#recruit-content {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+#talent-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+#t-content-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+#talent-wrap > h2 {
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-family: 'NeoDunggeunmo';
+    font-size: 25px;
+    text-align: center;
+    margin-right: 5%;
+}
+.talent-content {
+	width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'NeoDunggeunmo';
+}
+.talent-content > h3 {
+    font-size: 25px;
+    padding-top: 20px;
+}
+.talent-content > p {
+    font-size: 1.2rem;
+    padding-top: 10px;
+    text-align: center;
+    color: #dcdcdc;
+}
+#employ-wrap {
+    margin-top: 20%;
+    display: flex;
+}
+#employ-box {
+    width: 60%;
+    background-color: #bfc1c0;
+    border: 2px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    position: relative;
+    font-size: 18px;
+    margin-left: 3%;
+}
+#employ-wrap > h2 {
+    width: 150px;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-family: 'NeoDunggeunmo';
+    font-size: 25px;
+    text-align: center;
+    margin-right: 10%;
+    color: #fff;
+}
+#employ-topBox {
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    line-height: 30px;
+    margin: 0.5%;
+    background-color: #1300A5;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 17px;
+}
+.i-topBox-title {
+    display: flex;
+}
+.i-topBox-title > span > img {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 6px;
+}
+.employ-txt {
+    width: 99%;
+    height: 89%;
+    margin: 0.5%;
+    font-family: 'NeoDunggeunmo';
+    background-color: #fff;
+    border: 1.5px solid #222;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    padding: 50px;
+    padding-top: 60px;
+    /* padding-bottom: 60px; */
+}
+.employ-txt > li {
+	margin-bottom: 50px;
+}
+.employ-txt > li > h3 {
+    font-size: 22px;
+    font-weight: 550;
+}
+.employ-txt > li > p {
+    font-size: 20px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+
+/* 공지사항 페이지 */
+#notice-wrap {
+    width: 100vw;
+    height: 1080px;
+    position: relative;
+}
+.n-dot1 {
+    position: absolute;
+    bottom: 15%;
+    left: 8%;
+    animation: upAndDown 1.7s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.n-dot2 {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+    animation: upAndDown 1.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.n-dot3 {
+    width: 20px;
+    height: 10px;
+    background-color: #beedff94;
+    position: absolute;
+    top: 5.5%;
+    left: 17%;
+    animation: upAndDown 2.5s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+.n-dot4 {
+    position: absolute;
+    bottom: 5%;
+    right: 25%;
+    animation: upAndDown 2s infinite ease-in-out; /* 2초 동안 애니메이션 반복 */
+}
+#notice-title {
+    /* width: 100%; */
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+.n-typing {
+    display: inline-block;
+    font-size: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 42ch; /* 타이핑될 텍스트의 너비 지정 */
+    margin-top: 30px;
+    opacity: 60%;
+}
+.n-typing::before {
+    content: 'We bring you the latest news from Sungsan C&S.';
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    z-index: 20;
+    font-family: 'NeoDunggeunmo';
+    color: white;
+    height: 35px;
+    border-right: 2px solid rgba(255, 255, 255, 0.6);
+    box-sizing: border-box; /* 테두리를 포함하여 크기 계산 */
+    animation: n-typing 3s steps(44, end), blink-caret .90s step-end;
+}
+@keyframes n-typing {
+    from { width: 0; }
+    to { width: 45ch; }
+}
+.contain {
+    /* width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 1300px; */
+    /* background-color: #fff; */
+}
+#search-input {
+    width: 200px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 17px;
+    margin-top: 5%;
+}
+#search-btn {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    background-color: #bfc1c0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #222;
+}
+#search-btn:hover {
+    background-color: #92FFF1;
+}
+.search-container {
+    margin-bottom: 20px;
+}
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+}
+.search-container button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    /* color: white; */
+    border: none;
+    cursor: pointer;
+}
+/* 추가 스타일링 */
+.container.contain {
+    padding: 0 15%;
+}
+
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 30px;
+    color: #fff;
+}
+thead {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    border-top:  2px solid #fff;
+    border-bottom:  1px solid #fff;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+#notice-table-body > tr > td:nth-child(2) {
+    text-align: left;
+}
+tr {
+    cursor: pointer;
+    white-space: nowrap;
+}
+tbody tr:hover {
+    color: #92FFF1;
+}
+tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#paging_div {
+    text-align: center;
+    margin-top: 50px;
+}
+#paging_div > .paging_align a {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+#paging_div > .paging_align a:hover,
+#paging_div > .paging_align a:active {
+    background-color: #000;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    color: #fff;
+}
+/* 공지사항-상세 */
+.notice-detail {
+    box-sizing: border-box;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7%;
+    padding-top: 3%;
+    /* color: #fff; */
+}
+.container2 {
+    background-color: #fff;
+    /* width: 100%; */
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top: 10%; */
+    max-width:65%;
+}
+.title {
+    padding: 20px 15px;
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 21px;
+    font-weight: 500;
+}
+.info {
+    padding: 10px 15px;
+    background: #bfc1c0a0;
+    color: #333;
+    font-weight: 500;
+    border-bottom: 1px solid #333;
+}
+.cont {
+    min-height: 500px;
+    /* text-align: center; */
+    padding: 50px 25px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.content-btn {
+    width: 100px;
+    height: 35px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+    font-weight: 500;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    /* margin-left: 90%; */
+}
+.content-btn:hover {
+    background-color: #1300A5;
+    color: #fff;
+}
+
+
+/* 사이트맵 페이지 */
+#sitemap-wrap {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+}
+#sitemap-title {
+    width: 100%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+}
+#st-wrap {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 9%;
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+}
+#st-wrap a {
+    color: #fff;
+    text-decoration: none;
+}
+#st-wrap > li {
+    width: 20%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.7rem;
+    /* border-bottom: 2px solid #fff; */
+    border: 3px solid #333;
+    background-color: #bfc1c0;
+    position: relative;
+    font-family: 'NeoDunggeunmo';
+    border-radius: 5px;
+    cursor: pointer;
+}
+#st-wrap > li > a {
+    color: #333;
+}
+#st-wrap > li:hover  {
+    background-color: #ededed;
+}
+#st-wrap > li > ul > li:hover > a  {
+    color: #92FFF1;
+}
+.sitemap-sub {
+    font-family: 'NeoDunggeunmo';
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 85px;
+    text-align: center;
+	font-size: 1.7rem;
+    color: #d6d6d6;
+}
+.sitemap-sub > li {
+    height: 55px;
+    line-height: 55px;
+    white-space: nowrap;
+}
+.sitemap-sub > li:hover > a {
+    text-decoration: underline;
+    color: #92FFF1;
+}
+
+@media (max-width: 1800px) {
+	#se-box {
+    	width: 30%;
+	}
+} 
+@media (max-width: 1700px) {
+	#se-box {
+    	width: 30%;
+	}
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+		font-size: 1rem;
+	}
+	#ito-box {
+    	width: 25%;
+    	height: 73.5%;
+	}
+	#se-box {
+        width: 31%;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+		font-size: 1rem;
+    }
+} 
+@media (max-width: 1950px){
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+		font-size: 0.95rem;
+        white-space: nowrap;
+    }	
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.95rem;
+    }
+    .os-topBox-title > span > img {
+	    padding-top: 4px;
+	    width: 89%;
+	}
+}
+
+/* 반응형 - 노트북&테스크톱 */
+@media (max-width: 1919px) {
+	#d-box {
+		margin-left: 30px;
+	}
+	.g-txt {
+	    white-space: nowrap;
+	}
+	#d-box {
+	    white-space: nowrap;
+	}
+} 
+@media (max-width: 1540px) {
+	.transport > div > div > h4 {
+    	font-size: 1.2rem;
+	}
+	.transport > div > div > p {
+    	font-size: 0.8rem;
+    	padding-top: 2px;
+	}
+	.transport {
+	    flex-direction: column;
+	    align-items: flex-start;	 
+	}
+	.subway {
+		margin-left: 0;
+	}
+	#outsourcing-wrap {
+		height: 1250px;
+	}
+} 
+@media (max-width: 1450px) {
+	/* 회사소개 페이지 */
+	#g-content {
+    	max-width: 90%;
+	}
+	.g-txt {
+    	height: 91%;
+	}
+	#history-wrap {
+	    height: 2000px;
+	}
+	/* 회사연혁 페이지 */
+	.stairs {
+		width: 100%;
+	}
+	.history2 {
+	    top: 34%;
+	    right: 3%;
+	}
+	.history3 {
+	    bottom: 35%;
+	    left: 5%;
+	}
+	.history4 {
+	    bottom: 16%;
+	    right: 6%;
+	}
+	.person1 {
+	    width: 9%;
+	    top: 30.5%;
+	    left: 53%;
+	}
+	.person2 {
+	    width: 8%;
+	    top: 51.5%;
+	    left: 34%;
+	}
+	.person3 {
+	    width: 9%;
+	    bottom: 15.5%;
+	    left: 56%;
+	}
+	/* 오시는길 페이지 */
+	.subway {
+		margin-top: 5%;
+	}
+	/* 사업소개 페이지 */
+	#business-wrap {
+    	height: 1200px;
+    }
+	#business-box {
+		height: 37%;
+	}
+	.b-content-txt > p {
+	    margin-top: 3%;
+	    line-height: 35px;
+	    font-size: 1.2rem;
+	}
+	.read-more1, .read-more2, .read-more3, .read-more4 {
+	    font-size: 1.3rem;
+	    width: 150px;
+	    height: 55px;
+	}
+	.control-wrap ul {
+    	width: 50%;
+	}
+	/* 시스템통합 페이지 */
+	.file-icon1 > img, .file-icon2 > img,
+	.file-icon3 > img, .file-icon4 > img,
+	.file-icon5 > img, .file-icon6 > img {
+	    padding-bottom: 5px;
+	    width: 70%;
+	}
+	.file-icon1, .file-icon2, .file-icon3, .file-icon4,
+	 .file-icon5, .file-icon6 {
+		font-size: 0.9rem;
+	}
+	.si-icon, .os-icon, .ic-icon {
+		font-size: 0.9rem;
+	}
+	.si-icon > img, .os-icon > img {
+	    padding-bottom: 5px;
+	    width: 75%;
+	}
+	.ic-icon > img  {
+	    padding-bottom: 5px;
+		width: 60%
+	}
+	/* 아웃소싱 페이지 */
+	#outsourcing-wrap > a:nth-child(2) {
+	    right: 10%;
+	    top: 7%;
+	}
+	#outsourcing-wrap > a:nth-child(3) {
+	    right: 9%;
+	    top: 15%;
+	}
+	.file-icon4 > img {
+		width: 55%;
+	}
+	.o-typing {
+		font-size: 1.5rem;
+		margin-top: 40px;
+	}
+	#outsourcing-wrap > a:nth-child(2) > div > img {
+		width: 75%;
+	}
+	#outsourcing-wrap > a > div > img {
+	    padding-bottom: 4px;
+	    width: 60%;
+	}
+	#o-content {
+    	width: 90%;
+	}
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.9rem;
+    }
+	/* IT컨설팅 페이지 */
+    #isp-box {
+		width: 400px;
+   		height: 260px;
+    }
+	#c-content {
+    	width: 82%;
+	}
+    .isp-txt {
+	    height: 74.5%;
+	    padding-top: 35px;
+	}
+	#bpr-box {
+	    width: 510px;
+	    height: 250px;
+	}
+	.bpr-txt {
+	    padding-top: 30px;
+	    padding-left: 22px;
+	    height: 72%;
+	}
+    #secure-box {
+    	width: 370px;
+	    height: 200px;
+    }
+	.secure-txt {
+	    padding-top: 24px;
+	    padding-left: 35px;
+	    height: 66%;
+	}
+    #recover-box {
+   		width: 400px;
+   		height: 200px;
+    }
+    .recover-txt {
+	    padding-top: 25px;
+	    padding-left: 20px;
+	    height: 66%;
+	}
+} 
+@media (max-width: 1280px) {
+	.g-select {
+	    font-size: 0.9rem;
+	}
+	#g-content {
+    	max-width: 90%;
+	}
+	.d-content {
+    	width: 100%;
+	}
+	.d-content-txt > p {
+	    font-size: 1.4rem;
+	}
+	.d-content-txt > h4 {
+    	font-size: 0.8rem;
+	}
+	.d-content > img {
+	    width: 20%;
+	    padding-left: 20px;
+	}
+	#history-wrap {
+        height: 1700px;
+    }
+	.person2 {
+        top: 53%;
+    }
+    .person3 {
+        bottom: 12%;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+	    font-size: 2.1rem;
+	}
+	.history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+	    font-size: 0.95rem;
+	}
+	.history3 {
+        bottom: 34%;
+    }
+    .history4 {
+        bottom: 13%;
+    }
+    #road-wrap {
+	    height: 1250px;
+    }
+    .road-info > ul > li > h3 {
+	    font-size: 1.2rem;
+	    padding-bottom: 7px;
+	}
+	#transport-wrap > h3 {
+    	font-size: 1.2rem;
+	}    
+	.road-info > ul > li > p {
+	    padding-left: 10px;
+	}
+	.road-info > ul > li {
+	    margin-bottom: 10%;
+	}
+	#transport-wrap {
+	    margin-top: 25%;
+	}
+	.bus > i, .subway > i {
+	    font-size: 35px;
+	    width: 60px;
+	}
+	#business-wrap {
+        height: 1100px;
+    }
+    #business-box {
+        height: 45%;
+    }
+    .b-content-txt > p {
+        height: 250px;
+    }
+    #isp-box {
+        width: 370px;
+        height: 230px;
+    }
+    .isp-txt {
+        padding-left: 20px;
+        padding-top: 28px;
+    }
+    #bpr-box {
+        width: 500px;
+        height: 230px;
+    }
+    .bpr-txt {
+        padding-top: 25px;
+        padding-left: 15px;
+    }
+    #secure-box {
+        width: 340px;
+        height: 190px;
+    }
+    #consult-wrap {
+    	height: 1320px;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.8rem;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.85rem;
+	}
+	#se-box {
+    	height: 77%;
+	}
+	#app-box {
+    	height: 63%;
+	}
+	#infra-box {
+    	height: 70.5%;
+	}
+	#ito-box {
+        height: 72%;
+	}
+} 
+@media (max-width: 1220px) {
+    .b-content-txt > p {
+        height: 300px;
+    }
+    .o-typing {
+        font-size: 1.3rem;
+	}
+}
+@media (max-width: 1208px) {
+	/* 회사소개 인사말 페이지 */
+	.g-txt > span {
+	    font-size: 1rem;
+	}
+	#g-content {
+    	max-width: 80%;
+	}
+	#g-box {
+	    width: 645px;
+	    height: 600px;
+	}
+	.g-txt {
+		font-size: 0.9rem;
+		padding-top: 40px;
+	    white-space: nowrap;
+	}
+	.d-content > img {
+		display: none;
+	}
+	#d-box {
+	    width: 500px;
+	    height: 252px;
+	    margin-top: 20%;
+	    margin-left: 30px;
+	    white-space: nowrap;
+	}
+	.d-content {
+    	width: 100%;
+	}
+	.d-content-txt {
+	    margin-left: 0;
+	    padding-left: 4%;
+	}
+	.d-content-txt > p {
+	    font-size: 1.4rem;
+	    line-height: 30px;
+	    padding-left: 5%;
+	}
+	.d-content-txt > h4 {
+	    font-size: 0.85rem;
+	 }
+	.d-btn {
+	    width: 45%;
+	    margin-top: 16px;
+	}
+	/* 회사연혁 페이지 */
+    .person1, .person2, .person3 {
+    	display: none;
+    }
+    .history3 {
+        bottom: 37%;
+    }
+    .history4 {
+        bottom: 17%;
+    }
+    /* 사업소개 페이지 */
+    .b-content-txt > h2 {
+	    font-size: 2rem;
+	}
+	.read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 1.2rem;
+        width: 132px;
+        height: 50px;
+    }
+    .control-button {
+    	font-size: 0.85rem;
+    }
+    .control-wrap > ul > li:nth-child(1) > button > img {
+	    padding-top: 1px;
+	    padding-bottom: 6px;
+	}
+	/* 시스템통합 페이지 */
+	#integration-wrap > a:nth-child(1) {
+		top: 20%;
+		left: 5%;
+	}
+	#si-box, #support-box, #custom-box, #db-box {
+		font-size: 0.9rem;
+	}
+	.si-txt, .support-txt, .custom-txt, .db-txt {
+		font-size: 1rem;
+	}
+	#si-box {
+		width: 300px;
+    	height: 250px;
+	}
+	.si-txt {
+    	height: 75.5%;
+	    padding-top: 30px;
+	    padding-left: 25px;
+	}
+	#integration-wrap > a:nth-child(2) {
+		top: 9%;
+		right: 6%;
+	}
+	#integration-wrap > a:nth-child(3) {
+		top: 15%;
+		right: 6%;
+	}
+	#support-box {
+    	width: 330px;
+    	height: 300px;
+	}
+	.support-txt {
+	    padding-top: 30px;
+	    padding-left: 35px;
+	    height: 81%;
+	}	
+	#custom-box {
+		    width: 288px;
+		    height: 200px;
+		    margin-left: 8%;
+	}
+	.custom-txt {
+	    padding: 0;
+	    padding-left: 30px;
+	    height: 67%;
+	    padding-top: 18%;
+	}
+	#db-box {
+    	width: 335px;
+		height: 210px;
+		margin-left: 48%;
+    	margin-top: -17%;
+	}
+	.db-txt {
+	    padding-top: 35px;
+	}
+	/* IT 컨설팅 페이지 */
+	#consult-wrap > a:nth-child(2) {
+	    top: 9%;
+	    right: 6%;
+	}
+	#consult-wrap > a:nth-child(3) {
+	    top: 15%;
+	    right: 6%;
+	}
+	.isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+		font-size: 1.1rem;
+	}
+	#c-content {
+        width: 85%;
+    }
+    #isp-box {
+        width: 360px;
+        height: 200px;
+    }
+    .isp-txt {
+		height: 67.5%;
+        padding-top: 16px;
+    }
+    #bpr-box {
+        width: 460px;
+        height: 220px;
+    }
+    .bpr-txt {
+    	padding-top: 20px;
+		height: 69%;
+    }
+    #secure-box {
+        width: 320px;
+        height: 180px;
+    }
+    .secure-txt {
+        padding-top: 19px;
+        padding-left: 25px;
+        height: 64%;
+    }
+    #secure-box {
+        width: 300px;
+        height: 170px;
+    }
+    .secure-txt {
+        padding-top: 14px;
+        padding-left: 17px;
+        height: 64%;
+    }
+    #recover-box {
+        width: 370px;
+        height: 190px;
+    }
+	.recover-txt {
+        padding-top: 21px;
+	}
+	/* 아웃소싱 페이지 */
+	#o-content {
+    	width: 85%;
+	}
+	#ito-box {
+        width: 300px;
+        height: 377px;
+    }
+    #infra-box {
+        width: 300px;
+        height: 377px;
+    }
+    #app-box {
+        width: 300px;
+        height: 333px;
+    }
+    #se-box {
+        width: 300px;
+        height: 362px;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.9rem;
+    }
+    /* 공지사항 페이지 */
+    table thead th:nth-child(3),
+    table thead th:nth-child(4),
+    table thead th:nth-child(5),
+    table tbody td:nth-child(3),
+    table tbody td:nth-child(4),
+    table tbody td:nth-child(5) {
+        display: table-cell;
+    }
+}
+@media (max-width: 1200px) {
+    table thead th:nth-child(3),
+    table thead th:nth-child(4),
+    table thead th:nth-child(5),
+    table tbody td:nth-child(3),
+    table tbody td:nth-child(4),
+    table tbody td:nth-child(5) {
+        display: none;
+    }
+    .contain {
+        margin-left: auto;
+        margin-right: auto;
+        /* max-width: 80%; */
+        padding: 0 5%;
+    }
+    /* 공지사항 페이지 */
+    table thead th:nth-child(1),
+	table tbody td:nth-child(1) {
+    	width: 35%;
+    	text-align: center;
+	}
+    .g-typing, .h-typing, .r-typing,
+    .b-typing, .i-typing,
+    .c-typing, .s-typing {
+    	font-size: 1.8rem
+    }
+    #outsourcing-wrap {
+        height: 1450px;
+    }
+    #se-box {
+        width: 360px;
+        height: 394px;
+    }
+    /* 인재채용 페이지 */
+    #recruit-content {
+    	max-width: 75%;
+    }
+	.talent-content > p {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+    .talent-content > img {
+	    width: 35%;
+	}
+	#talent-wrap > h2, #employ-wrap > h2 {
+	    width: 150px;
+	    height: 50px;
+	    line-height: 50px;
+	    border-radius: 15px;
+	    font-size: 21px;
+	 }
+	 .employ-txt {
+	 	padding-top: 50px;
+	 }
+}
+@media (max-width: 1050px) {
+	.isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 1rem;
+    }
+    #isp-box {
+        width: 330px;
+        height: 195px;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+    	font-size: 0.9rem;
+    }
+    .c-typing {
+        font-size: 1.5rem;
+    }
+    #bpr-box {
+        width: 430px;
+        height: 210px;
+    }
+    #secure-box {
+        width: 280px;
+        height: 170px;
+    }
+    #recover-box {
+        width: 360px;
+        height: 190px;
+    }
+    .ic-icon > img {
+        padding-bottom: 5px;
+        width: 50%;
+    }
+    #outsourcing-wrap {
+        height: 1500px;
+    }
+    #o-content {
+        width: 70%;
+    }
+    .employ-txt {
+    	padding: 30px;
+    }
+    .employ-txt > li > h3 {
+    	font-size: 20px;
+    }
+    .employ-txt > li > p {
+    	font-size: 17px;
+    }
+}
+/* 반응형 - 테블릿 */
+@media (max-width: 1024px) {
+	#g-title > h2, #h-title > h2, #r-title > h2, #b-title > h2, 
+	#i-title > h2, #o-title > h2, #c-title > h2, #recruit-title > h2,
+	#notice-title > h2, #sitemap-title > h2 {
+		font-size: 3rem;
+	}
+	#sitemap-title {
+		margin-top: 15%;
+	}
+	/* 회사소개 페이지 */
+	.ani-dot2 {
+	    top: 14%;
+	    right: 12%;
+	}
+	.ani-dot4 {
+	    bottom: 3%;
+	    right: 16%;
+    }
+	#greeting {
+        height: 1350px;
+    }
+    #g-content {
+        flex-direction: column;
+        max-width: 63%;
+        height: auto;
+    }
+    #g-box {
+        width: 100%;
+        height: 600px;
+    }
+	.g-txt {
+        height: 89%;
+    }
+	.d-content > img {
+        display: block;
+    }
+    #d-box {
+        width: 470px;
+        height: 240px;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .d-content {
+   	 	margin-top: 20px;
+    }
+    .d-content-txt > p {
+        font-size: 1.3rem;
+        line-height: 27px;
+        padding-left: 5%;
+    }
+    .d-btn {
+        width: 34%;
+        margin-top: 20px;
+    }
+    /* 회사연혁 페이지 */
+    #history-wrap {
+        height: 1350px;
+    }
+    .stairs {
+    	top: 35%;
+    }
+	.history2 {
+        top: 32%;
+    }
+    .history3 {
+        bottom:31%;
+    }
+    .history4 {
+        bottom: 10%;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+        font-size: 1.8rem;
+    }    
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.85rem;
+    }
+    /* 오시는길 페이지 */
+    #road-wrap {
+	    height: 1100px;
+	}
+	/* 사업소개 페이지 */
+	#business-wrap {
+        height: 950px;
+    }
+	#business-box {
+        height: 41%;
+    }
+	.b-content-txt > h2 {
+        font-size: 1.8rem;
+    }
+	.b-content-txt > p {
+        margin-top: 2%;
+        line-height: 30px;
+        font-size: 1rem;
+        height: 250px;
+    }
+    .read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 1.1rem;
+        width: 120px;
+        height: 45px;
+    }    
+	#b-control > p {
+	    font-size: 0.8rem;    
+	}
+	.control-button {
+        font-size: 0.75rem;
+        height: 67px;
+    }
+    .control-wrap > ul > li:nth-child(2) > button > img {
+	    width: 50%;
+	    padding-top: 2px;
+	    padding-bottom: 5px;
+	}
+    .control-wrap > ul > li:nth-child(3) > button > img {
+		width: 57%;
+	    padding-bottom: 2px;
+	}
+	/* 아웃소싱 페이지 */
+    #o-content {
+        width: 66%;
+    }	
+	#ito-box {
+        width: 320px;
+        height: 389px;
+    }
+    #infra-box {
+        width: 330px;
+        height: 395px;
+    }
+    #app-box {
+        width: 320px;
+        height: 346px;
+    }
+    #se-box {
+        height: 394px;
+    }
+	/* 시스템통합 페이지 */
+	#integration-wrap {
+		height: 1200px;
+	}
+	.file-icon1, .file-icon2,
+	.file-icon3, .file-icon4,
+	.file-icon5, .file-icon6 {
+		display: none;
+	}
+	#si-box {
+        width: 280px;
+        height: 220px;
+    }
+    .si-txt {
+        height: 74%;
+        padding-top: 20px;
+        padding-left: 17px;
+    }
+    #support-box {
+        width: 300px;
+        height: 260px;
+    }
+    .support-txt {
+        padding-top: 20px;
+        padding-left: 25px;
+		height: 77%;
+    }
+    #custom-box {
+        width: 250px;
+        height: 160px;
+        margin-left: 8%;
+    }
+    .custom-txt {
+        padding-left: 18px;
+        padding-top: 16%;
+        height: 64%;
+    }
+    #db-box {
+        width: 300px;
+        height: 180px;
+    }
+    .db-txt {
+        padding-top: 24px;
+        padding-left: 40px;
+		height: 67%;
+    }
+    #si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+    	font-size: 0.9rem;
+    }
+    /* IT 컨설팅 페이지 */
+    #consult-wrap {
+    	height: 1100px;
+    }
+    #consult-wrap > a:nth-child(1) {
+	    top: 17%;
+	    left: 5%;
+    }
+    #c-content {
+        width: 90%;
+    }
+    .isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 0.95rem;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        font-size: 0.8rem;
+    }
+    .i-topBox-title > span > img {
+    	width: 85%;
+    	padding-right: 0px;
+    	padding-top: 5px;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+    	height: 25px;
+    	line-height: 25px;
+    }
+    #isp-box {
+        width: 310px;
+        height: 190px;
+    }
+    #btn-box > p {
+	    width: 24px;
+	    height: 24px;
+	    font-size: 16px;
+    }
+    #bpr-box {
+        width: 400px;
+        height: 200px;
+    }
+    #secure-box {
+        width: 270px;
+        height: 170px;
+    }
+    #recover-box {
+        width: 330px;
+        height: 180px;
+    }
+    .c-typing {
+        font-size: 1.3rem;
+    }
+    #outsourcing-wrap > a:nth-child(1) {
+	    top: 8%;
+	    left: 5%;
+    }
+    /* 공지사항 페이지 */
+    table thead th:nth-child(1),
+	table tbody td:nth-child(1) {
+    	width: 30%;
+    	text-align: center;
+	}
+	.contain {
+		margin-top: 5%;
+	}
+	#search-input {
+	    width: 190px;
+	    padding: 5px;
+	    font-size: 14px;
+	}
+	#search-btn {
+	    padding: 5px 12px;
+	    margin-left: 8px;
+	    font-size: 14px;
+	}
+	table {
+	    font-size: 0.9rem;
+	}
+	/* 인재채용 페이지 */
+	#employ-box {
+		width: 80%;
+    	height: 580px;
+	}
+	#recruit-wrap {
+    	height: 1330px;
+	}
+    .talent-content {
+    	width: 33%;
+    }
+	.talent-content > img {
+        width: 30%;
+    }
+    .talent-content > h3 {
+	    font-size: 22px;
+	    padding-top: 15px;
+	}
+	.talent-content > p {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+    #talent-wrap > h2, #employ-wrap > h2 {
+        width: 140px;
+        height: 45px;
+        line-height: 45px;
+        border-radius: 13px;
+        font-size: 18px;
+    }
+    /* 사이트맵 페이지 */
+    #sitemap-wrap {
+    	height: 850px;
+	}
+	#st-wrap > li {
+		font-size: 1.5rem;	
+	}
+	.sitemap-sub {
+		font-size: 1.5rem;
+	}
+}
+@media (max-width: 1000px) {
+	#o-content {
+        width: 72%;
+    }
+    #ito-box {
+        width: 310px;
+        height: 385px;
+    }
+    #infra-box {
+        width: 320px;
+        height: 390px;
+    }
+	#app-box {
+        width: 300px;
+        height: 332px;
+    }
+	#se-box {
+        width: 340px;
+        height: 378px;
+    }
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.85rem;
+    }
+	.o-typing {
+        font-size: 1.15rem;
+    }
+}
+@media (max-width: 950px) {
+	.history3 {
+        bottom: 34%;
+    }
+    .history4 {
+        bottom: 14%;
+    }
+    .animated-title {
+	    font-size: 50px;
+	    height: 73px;
+	    line-height: 36px;
+	}
+	#business-wrap {
+        height: 900px;
+    }
+	.control-wrap ul {
+        width: 60%;
+    }
+	.control-button {
+        font-size: 0.7rem;
+    }
+    .b-content-txt > h2 {
+        font-size: 1.5rem;
+    }
+    .b-content-txt > p {
+        margin-top: 2%;
+        line-height: 27px;
+        font-size: 0.9rem;
+    }
+    .read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 1rem;
+        width: 110px;
+        height: 40px;
+    }
+    .n-typing {
+        font-size: 1.7rem;
+    }
+    #recruit-content {
+        max-width: 80%;
+    }
+    #employ-wrap > h2 {
+    	margin-right: 10px;
+    }
+    #employ-box {
+        width: 95%;
+    }
+    #sitemap-wrap {
+    	height: 800px;
+    }
+    #st-wrap {
+    	max-width: 70%;
+    }
+    #st-wrap > li {
+	    width: 21%;
+	    height: 55px;
+	    line-height: 55px;
+	    text-align: center;
+	    font-size: 1.3rem;
+    }
+    #sitemap-title {
+        margin-top: 20%;
+    }
+    .sitemap-sub {
+	    top: 70px;
+	    font-size: 1.25rem;
+    }
+    .sitemap-sub > li {
+    	height: 50px;	
+    }
+}
+@media (max-width: 880px) {
+	#isp-box {
+        width: 295px;
+        height: 185px;
+    }
+	#bpr-box {
+        width: 400px;
+        height: 195px;
+    }
+    #secure-box {
+        width: 250px;
+        height: 165px;
+    }
+    #recover-box {
+        width: 310px;
+        height: 170px;
+    }
+    #ito-box {
+        width: 300px;
+        height: 372px;
+    }
+    #infra-box {
+        width: 290px;
+        height: 365px;
+    }
+    #app-box {
+        width: 280px;
+        height: 319px;
+    }
+    #se-box {
+        width: 339px;
+        height: 375px;
+    }
+}
+@media (max-width: 850px) {
+	#topBox2, #topBox3 {
+		height: 70px;
+	}
+	/* 회사소개 페이지 */
+	#greeting {
+        height: 1250px;
+    }
+    #g-content {
+        flex-direction: column;
+        max-width: 70%;
+        height: auto;
+    }
+    .ani-dot1, .ani-dot2, .dot1, 
+    .dot2, .r-dot1, .r-dot2, .b-dot1, .b-dot2,
+    .n-dot1, .n-dot2, .r-dot1, .r-dot2 {
+    	width: 2.5%;
+    }
+    .ani-dot3, .dot3, .dot4, .r-dot3, .b-dot3, .n-dot3, .r-dot3 {
+    	width: 15px;
+    	height: 7px;
+    }
+    .ani-dot4, .dot5, .r-dot4, .b-dot4, .n-dot4, .r-dot4 {
+    	width: 2%;
+    }
+    .r-dot3 {
+    	top: 9%;
+    	left: 16%;
+    }
+    .r-dot2 {
+		top: 11%;
+    	right: 9%;
+    }
+    .history3 {
+        bottom: 38%;
+    }
+    .history4 {
+        bottom: 20%;
+    }
+    #business-wrap {
+        height: 850px;
+    }
+    .b-content-txt > h2 {
+        font-size: 1.4rem;
+    }
+    #b-topBox {
+    	height: 30px;
+    	line-height: 30px;
+    	font-size: 15px;
+    }
+    #b-topBox > div {
+	    font-size: 20px;
+	    width: 27px;
+	    height: 27px;
+	    margin-top: 0px;
+	    margin-right: 1px;
+	    line-height: 27px;
+	}
+	#i-content {
+    	width: 90%;
+	}
+	.isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 0.85rem;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        font-size: 0.73rem;
+    }
+    #isp-box {
+        width: 275px;
+        height: 165px;
+    }
+	#bpr-box {
+        width: 359px;
+        height: 180px;
+    }
+    #secure-box {
+	    width: 250px;
+        height: 150px;
+	    margin-left: 3%;
+	}
+	.c-typing {
+        font-size: 1.1rem;
+    }
+	#recover-box {
+        width: 290px;
+        height: 160px;
+    }
+    .ic-icon > img {
+        padding-bottom: 3px;
+        width: 40%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.8rem;
+    }
+    #o-content {
+        width: 73.5%;
+    }
+    #ito-box {
+        width: 280px;
+        height: 354px;
+    }
+   	#infra-box {
+        width: 270px;
+        height: 347px;
+    }
+    #app-box {
+        width: 260px;
+        height: 302px;
+    }
+    #se-box {
+        width: 321px;
+        height: 362px;
+    }
+    .talent-content > h3 {
+        font-size: 20px;
+	}
+    .talent-content > p {
+        font-size: 0.8rem;
+		padding-top: 5px;
+    }
+    .employ-txt > li {
+	    margin-bottom: 40px;
+	}
+	.employ-txt > li > p {
+        font-size: 16.5px;
+    }
+}
+/* 반응형 - 모바일 */
+@media (max-width: 768px) {
+	#g-title > h2, #h-title > h2, #r-title > h2, #b-title > h2, 
+	#i-title > h2, #o-title > h2, #recruit-title > h2, #c-title > h2,
+	#notice-title > h2, #sitemap-title > h2 {
+		font-size: 2.5rem;
+	}
+	.g-typing, .h-typing, .r-typing, .b-typing, .i-typing, 
+	.n-typing, .recruit-typing {
+        font-size: 1.5rem;
+    }
+	/* 회사소개 페이지 */
+	.g-txt {
+        font-size: 0.85rem;
+	}
+	.contain {
+        margin-left: auto;
+        margin-right: auto;
+        /* max-width: 85%; */
+        padding: 0 5%;
+    }
+    table thead th:nth-child(1),
+	table tbody td:nth-child(1) {
+    	width: 25%;
+	}
+    table thead th:nth-child(2),
+    table tbody td:nth-child(2) {
+    	width: 75%;
+    }
+    /* 회사연혁 페이지 */
+    .dot4 {
+    	bottom: 33%;
+    	right: 32%;
+    }
+    .dot5 {
+	    left: 43%;
+    }
+    #history-wrap {
+        height: 1250px;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+        font-size: 1.6rem;
+    }
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.75rem;
+    }
+    .history3 {
+        bottom: 40%;
+    } 
+    .history4 {
+        bottom: 23%;
+    }
+    /* 오시는길 페이지 */
+    #location-wrap {
+    	width: 80%;
+    	flex-direction: column;
+    }
+    #road-wrap {
+        height: 1100px;
+    }
+    .animated-title {
+    	display: none;
+    }
+	#map {
+        top: 14%;
+        height: 387px;
+    }
+    #l-box {
+    	width: 100%;
+		height: 460px;
+    }
+    #r-info {
+    	width: 100%;
+    	display: flex;
+    	margin-top: 5%;
+    }
+    #transport-wrap {
+        margin-top: 5%;
+    }
+    .bus > i, .subway > i {
+        font-size: 35px;
+        width: 60px;
+        display: none;
+    }
+    .road-info {
+    	width: 40%;
+    }
+    .road-info > ul > li > h3 > span {
+	    padding-right: 10px;
+	    font-size: 15px;
+	}
+	.road-info > ul > li > p {
+    	font-size: 0.8rem;
+	}
+	#transport-wrap {
+        width: 60%;
+        margin-top: 4%;
+        padding-left: 8%;
+    }
+	#transport-wrap > h3 {
+        font-size: 1rem;
+    }
+    #transport-wrap > h3 > span {
+	    font-size: 1.3rem;
+	    padding-right: 10px;
+	}
+	.transport > div > div > h4 {
+        font-size: 1.1rem;
+    }
+    .subway {
+        margin-top: 12%;
+    }
+    /* 사업소개 페이지 */
+    #business-wrap {
+        height: 750px;
+    }
+    .b-content-txt > p {
+        margin-top: 1%;
+        line-height: 22px;
+        font-size: 0.8rem;
+        height: 195px;
+    }
+    .control-wrap ul {
+        width: 66%;
+    }
+    .read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 0.9rem;
+        width: 100px;
+        height: 35px;
+    }
+    .control-button {
+        font-size: 0.75rem;
+        height: 62px;
+    }
+    /* 시스템통합 페이지 */
+    #integration-wrap {
+        height: 1000px;
+    }
+	.si-txt, .support-txt, .custom-txt, .db-txt {
+        font-size: 0.9rem;
+    }
+    #si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+        font-size: 0.8rem;
+    }
+	#si-box {
+        width: 260px;
+        height: 200px;
+    }
+    .si-txt {
+        height: 71%;
+	}
+    #support-box {
+        width: 270px;
+        height: 250px;
+    }
+    .support-txt {
+        padding-top: 20px;
+    }
+    #custom-box {
+        width: 230px;
+        height: 140px;
+    }
+    .custom-txt {
+        padding-left: 16px;
+        padding-top: 13%;
+        height: 58%;
+    }
+    #db-box {
+        width: 275px;
+        height: 160px;
+    }
+    .db-txt {
+        padding-top: 20px;
+        padding-left: 35px;
+        height: 62%;
+    }
+    /* 아웃소싱 페이지 */
+    #outsourcing-wrap > a > div > img {
+        padding-bottom: 3px;
+        width: 50%;
+    }
+    #outsourcing-wrap > a:nth-child(1) {
+        top: 6%;
+        left: 4%;
+    }
+    #o-title {
+    	margin-top: 15%;
+    }
+    .o-typing {
+    	font-size: 1rem;
+    }
+    .o-typing::before {
+		height: 20px;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+    	height: 25px;
+    }
+    .os-topBox-title > span > img {
+        padding-top: 6px;
+        width: 79%;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.8rem;
+    }
+    #btn-box > p {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 13px;
+    }
+	#ito-box {
+        width: 260px;
+         height: 323px;
+    }
+	#app-box {
+        width: 250px;
+        height: 287px;
+    }
+    #se-box {
+        width: 304px;
+        height: 341px;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.75rem;
+    }
+    /* IT 컨설팅 페이지 */
+    #consult-wrap > a:nth-child(1) {
+        top: 22%;
+        left: 3%;
+    }
+    .isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 0.8rem;
+    }
+    .g-select {
+        font-size: 0.8rem;
+    }
+    #btn-box > p {
+        width: 21px;
+        height: 21px;
+        font-size: 15px;
+    }
+    #isp-box {
+        width: 275px;
+        height: 160px;
+    }
+    .isp-txt {
+		padding-top: 13px;
+    }
+    #bpr-box {
+        width: 340px;
+        height: 175px;
+    }
+    #secure-box {
+        width: 235px;
+        height: 145px;
+	}
+	#recover-box {
+        width: 280px;
+        height: 155px;
+    }
+    #consult-wrap {
+        height: 1000px;
+    }
+    #paging_div > .paging_align a {
+	    padding: 7px 12px;
+	    margin: 0 5px;
+	}
+	/* 인재채용 페이지 */
+	#talent-wrap, #employ-wrap {
+	    flex-direction: column;
+		align-items: start;
+	}
+	#talent-wrap > h2, #employ-wrap > h2 {
+        width: 126px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+    #talent-wrap > h2, #employ-wrap > h2 {
+        width: 126px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 10px;
+        font-size: 16px;
+        margin-left: 6%;
+        margin-bottom: 6%;
+    }
+    #employ-box {
+        width: 95%;
+        height: 500px;
+    }
+    .employ-txt {
+    	height: 88%;
+    }
+    /* 사이트맵 페이지 */
+	#sitemap-wrap {
+        height: 700px;
+    }
+    #st-wrap {
+        max-width: 75%;
+    }    
+    #st-wrap > li {
+        width: 22%;
+        font-size: 1.25rem;
+    }
+    .sitemap-sub {
+        top: 65px;
+        font-size: 1.2rem;
+    }
+    .sitemap-sub > li {
+        height: 45px;
+    }
+}
+@media (max-width: 750px) {
+	.o-typing {
+        font-size: 0.95rem;
+        margin-top: 30px;
+    }
+    .o-typing::before {
+		height: 22px;
+    }
+    #ito-box {
+        width: 50%;
+        height: 334px;
+    }
+    #infra-box {
+        width: 50%;
+		height: 333px;
+	}
+    #app-box {
+    	width: 45%;
+		height: 282px;
+    }
+    #se-box {
+	    width: 56%;
+		height: 340px;
+	}
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.72rem;
+    }
+    #outsourcing-wrap {
+        height: 1280px;
+    }
+}
+@media (max-width: 710px) {
+	#g-content {
+        flex-direction: column;
+        max-width: 80%;
+        height: auto;
+    }
+    #business-box {
+    	width: 80%;	
+    }
+    .control-wrap ul {
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #b-control > p {
+        width: 65%;
+        font-size: 0.75rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .control-button {
+        font-size: 0.65rem;
+    }
+    .isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 0.7rem;
+    }
+    #isp-box {
+        width: 270px;
+        height: 150px;
+    }
+    #bpr-box {
+        width: 320px;
+        height: 160px;
+    }
+    .bpr-txt {
+        padding-top: 15px;
+        height: 68%;
+    }
+    #secure-box {
+        width: 220px;
+        height: 130px;
+    }
+    .secure-txt {
+        padding-top: 10px;
+        padding-left: 16px;
+        height: 60%;
+    }
+    #recover-box {
+        width: 250px;
+        height: 140px;
+    }
+    .recover-txt {
+        padding-top: 18px;
+        padding-left: 10px;
+    }
+    #o-content {
+        width: 77%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.7rem;
+    }
+    .o-typing {
+        font-size: 0.85rem;
+        margin-top: 25px;
+    }
+    #notice-wrap {
+    	height: 1000px;
+    }
+    .title {
+	    padding: 13px 20px;
+	    font-size: 18px;
+	}
+	.info {
+	    padding: 10px 15px;
+	    font-size: 14px;
+	}
+	.container2 {
+		max-width: 75%;
+    	height: 64%;
+	}
+    .cont {
+    	font-size: 15px;
+    	min-height: 450px;
+    }
+    .content-btn {
+    	width: 90px;
+    	height: 31px;
+    	font-size: 14px;
+    	margin-left: 30px;
+    }
+}
+@media (max-width: 668px) {
+	.control-wrap ul {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #b-control > p {
+        width: 70%;
+        font-size: 0.7rem;
+    }
+    .i-typing {
+    	font-size: 1.3rem;
+    }
+    .c-typing {
+        font-size: 1rem;
+    }
+    .si-txt, .support-txt, .custom-txt, .db-txt {
+        font-size: 0.8rem;
+    }
+    #si-box {
+        width: 240px;
+        height: 185px;
+    }
+	.si-txt {
+        padding-top: 15px;
+    }
+    #support-box {
+        width: 230px;
+        height: 220px;
+    }
+    .support-txt {
+        padding-top: 15px;
+        padding-left: 16px;
+    }
+    #custom-box {
+        width: 203px;
+        height: 130px;
+    }
+    #si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+    	height: 25px;
+    	line-height: 25px;
+    }
+    .i-topBox-title > span > img {
+	    width: 85%;
+		padding-right: 2px;
+	}
+    #btn-box > p {
+    	width: 22px;
+    	height: 22px;
+    	font-size: 15px;
+    }
+    #db-box {
+        width: 265px;
+        height: 140px;
+    }
+    .db-txt {
+        padding-top: 16px;
+	}
+	.si-icon > img {
+        padding-bottom: 2px;
+        width: 55%;
+    }
+    #isp-box {
+    	margin-left: 8%;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        font-size: 0.65rem;
+    }
+    #isp-box {
+        width: 255px;
+        height: 135px;
+    }
+    #bpr-box {
+        width: 300px;
+        height: 150px;
+    }
+    #recover-box {
+        width: 240px;
+        height: 135px;
+    }
+    #secure-box {
+        width: 215px;
+        height: 130px;
+    }
+    #employ-box {
+        width: 95%;
+        height: 550px;
+    }
+    .employ-txt > li > h3 {
+        font-size: 18px;
+    }
+	.employ-txt > li > p {
+        font-size: 16px;
+    }
+}
+@media (max-width: 645px) {
+	#history-wrap {
+        height: 1100px;
+    }
+	#g-box {
+        width: 100%;
+        height: 570px;
+    }
+	.g-txt {
+        font-size: 0.8rem;
+    }
+    .history2 {
+        top: 31%;
+    }
+    .history3 {
+        bottom: 40%;
+    }    
+    .history4 {
+        bottom: 23%;
+    }
+    #transport-wrap {
+        padding-left: 5%;
+    }
+    #c-content {
+        width: 70%;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        font-size: 0.7rem;
+    }
+    #isp-box {
+        width: 270px;
+        height: 150px;
+		margin-left: 17%;
+    }
+    #bpr-box {
+        width: 320px;
+        height: 160px;
+        margin-top: -2%;
+    	margin-left: -6%;
+    }
+    #secure-box {
+        width: 230px;
+        height: 129px;
+        margin-left: 34%;
+        margin-top: -3%;
+    }
+    #recover-box {
+        width: 260px;
+        height: 138px;
+        margin-left: 18%;
+    	margin-top: -2%;
+    }
+    #ito-box {
+        height: 42.5%;
+    }
+    #infra-box {
+        height: 42.5%;
+    }
+    #app-box {
+        height: 38%;
+    }
+    #se-box {
+        height: 45.5%;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.75rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.65rem;
+    }
+    .o-typing {
+        font-size: 0.8rem;
+        margin-top: 23px;
+    }
+    .o-typing::before {
+		height: 20px;
+    }
+    .o-typing::before {
+		height: 17px;
+    }
+    .g-typing, .h-typing, .r-typing, .b-typing, .i-typing, .n-typing, .recruit-typing {
+        font-size: 1.3rem;
+    }
+    table {
+    	font-size: 0.85rem;
+    }
+    #search-input {
+        width: 170px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    #notice-title {
+    	margin-top: 15%;
+    }
+}
+@media (max-width: 600px) {
+	.ani-dot1, .ani-dot2, .dot1, .dot2, 
+	.r-dot1, .r-dot2, .b-dot1, .b-dot2,
+	.n-dot1, .n-dot2, .r-dot1, .r-dot2 {
+        width: 3%;
+    }
+    .dot5 {
+    	width: 2.5%;
+	    top: 47%;
+    }
+    #greeting {
+        height: 1150px;
+    }
+	#greeting {
+        height: 1100px;
+    }
+    #g-box {
+        width: 100%;
+        height: 500px;
+    }
+	.g-txt > span {
+        font-size: 0.8rem;
+    }
+	.g-txt {
+        font-size: 0.7rem;
+		padding-top: 30px;
+    }
+	.g-txt {
+        height: 87.2%;
+    }
+    #d-box {
+        width: 400px;
+        height: 200px;
+	}
+	.d-content {
+        margin-top: 15px;
+    }
+	.d-content-txt > p {
+        font-size: 1.1rem;
+        line-height: 20px;
+        padding-left: 3%;
+    }
+    .d-content-txt > h4 {
+        font-size: 0.72rem;
+    }
+    .d-btn {
+        width: 33%;
+        margin-top: 15px;
+    }
+    .d-btn > button {
+    	width: 130px;
+    	height: 35px;
+    }
+    .h-typing {
+    	margin-top: 10px;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+        font-size: 1.3rem;
+    }
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.65rem;
+        padding-top: 3px;
+    }
+	.history3 {
+        bottom: 42%;
+    }
+	.history4 {
+        bottom: 27%;
+    }
+    /* 사업소개 페이지 */
+    .b-typing {
+    	font-size: 1.3rem;
+    }
+    #business-wrap {
+        height: 1000px;
+    }
+    #business-box {
+    	width: 75%;
+        height: 51%;
+    }
+    .b-content {
+    	flex-direction: column;
+    }
+    .b-imgBox {
+	    width: 90%;
+	    margin: auto;
+	}
+	#b-control {
+    	max-width: 80%;
+	}
+	.b-content-txt {
+    	width: 85%;
+	}
+	.read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 0.8rem;
+        width: 90px;
+        height: 35px;
+    }
+    .b-content-txt > p {
+        height: 120px;
+    }
+    .read-more1, .read-more2, .read-more3, .read-more4 {
+        font-size: 0.75rem;
+        width: 85px;
+        height: 30px;
+	    right: 8%;
+	    bottom: 24%;
+    }
+    .b-content-txt {
+        width: 80%;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .i-typing {
+    	font-size: 1.2rem;
+    }
+    /* 시스템통합 페이지 */
+    #integration-wrap > a:nth-child(1) {
+        top: 23%;
+        left: 3%;
+    }
+    #i-content {
+        width: 95%;
+    }
+    #i-title {
+    	width: 100%;
+    	margin-top: 15%;
+    }
+	.c-typing {
+        font-size: 0.9rem;
+    }
+    /* 아윳소싱 페이지 */
+	#outsourcing-wrap {
+        height: 1050px;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.7rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.64rem;
+    }
+    #o-content {
+        width: 81%;
+    }
+    #ito-box {
+        height: 43%;
+    }
+    #infra-box {
+        height: 43%;
+    }
+    #app-box {
+        height: 35.5%;
+    }
+    #se-box {
+        height: 44%;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        height: 21px;
+    }
+    #btn-box > p {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+        line-height: 18px;
+    }
+    .os-topBox-title > span > img {
+        padding-top: 9px;
+        width: 68%;
+        padding-right: 0px;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+		padding: 10px 5px;
+    }
+    .si-icon, .os-icon, .ic-icon {
+        font-size: 0.7rem;
+    }
+    #outsourcing-wrap > a > div > img {
+        padding-bottom: 1px;
+        width: 40%;
+    }
+    /* 공지사항-성새 패아지 */
+	.title {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+    .info {
+        padding: 7px 15px;
+        font-size: 12px;
+    }
+    .cont {
+        font-size: 13px;
+	}
+	/* 인재채용 페이지 */
+	#recruit-content {
+        max-width: 85%;
+    }
+	.talent-content > p {
+        font-size: 0.75rem;
+        padding-top: 5px;
+    }
+    #recruit-title {
+    	margin-top: 15%;
+    }
+    /* 사이트맵 페이지 */
+	#st-wrap > li {
+        width: 23%;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.2rem;
+        border: 2px solid #333;
+    }
+    .sitemap-sub {
+        top: 60px;
+        font-size: 1.1rem;
+    }
+    .sitemap-sub > li {
+        height: 40px;
+    }
+}
+@media (max-width: 540px) {
+	.ani-dot3, .dot3, .dot4, .r-dot3, .b-dot3, .n-dot3, .r-dot3 {
+        width: 12px;
+        height: 4px;
+    }
+    .ani-dot4, .dot5, .r-dot4, .b-dot4, .n-dot4, .r-dot4 {
+        width: 2.5%;
+    }
+    /* 회사소개 페이지 */
+	#g-content {
+        max-width: 85%;
+    }
+    /* 회사연혁 페이지 */
+	#history-wrap {
+        height: 900px;
+    }
+    .history3 {
+        bottom: 40%;
+    }
+	.history4 {
+        bottom: 22%;
+    }
+    .stairs {
+        width: 120%;
+    }
+    /* 오시는길 페이지 */
+    #location-wrap {
+        width: 85%;
+	}
+	#l-box {
+        height: 404px;
+    }
+	#map {
+        top: 14%;
+        height: 340px;
+	}
+    #road-wrap {
+        height: 1300px;
+    }
+	#r-info {
+        width: 100%;
+        flex-direction: column;
+    }
+    .road-info {
+        width: 100%;
+    }
+    #transport-wrap {
+        padding-left: 0;
+        width: 100%;
+		margin-top: 10%;
+    }
+    .road-info > ul > li {
+        margin-bottom: 7%;
+    }
+    .subway {
+        margin-top: 5%;
+    }
+    /* 사업소개 페이지 */
+    #b-title{
+        margin-top: 15%;
+	}  
+    #b-topBox {
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+    }
+    #b-topBox > div {
+        font-size: 15px;
+        width: 23px;
+        height: 23px;
+        margin-top: 0px;
+        margin-right: 0px;
+        line-height: 23px;
+    }
+    #business-box {
+        height: 54%;
+    }
+    .b-content-txt > p {
+        height: 165px;
+    }
+    .read-more1, .read-more2, .read-more3, .read-more4 {
+        right: auto;
+        bottom: 3%;
+    }
+	.control-button {
+        font-size: 0.6rem;
+    }
+    /* 사업소개  페이지 */
+    #si-box {
+        width: 220px;
+        height: 170px;
+    }
+    .si-txt {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+    #support-box {
+        width: 220px;
+        height: 200px;
+    }
+    .support-txt {
+        padding-top: 9px;
+        padding-left: 9px;
+    }
+    #custom-box {
+        width: 190px;
+        height: 115px;
+    }
+    #db-box {
+        width: 240px;
+        height: 130px;
+    }
+    .db-txt {
+        padding-top: 12px;
+    }
+	#si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+        font-size: 0.7rem;
+    }
+    .i-typing {
+        font-size: 1.1rem;
+    }
+    .c-typing {
+        font-size: 0.8rem;
+    }
+    #c-content {
+        width: 65%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.6rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.58rem;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.66rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        padding: 10px 9px;
+    }
+    .o-typing {
+        font-size: 0.65rem;
+        margin-top: 23px;
+    }
+    .o-typing::before {
+		height: 16px;
+    }
+    .container.contain {
+	    padding: 0 12%;
+	}
+	.container2 {
+        height: 60%;
+    }
+    .title {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+    .info {
+        padding: 5px 15px;
+        font-size: 11px;
+    }
+    .cont {
+    	padding: 35px 20px;
+    	font-size: 12px;
+    }
+    .content-btn {
+        width: 85px;
+        height: 28px;
+        font-size: 13px;
+        margin-left: 25px;
+        margin-top: 0;
+    }
+    .i-topBox-title > span > img {
+        width: 80%;
+        padding-right: 2px;
+    }
+    #employ-topBox {
+    	height: 25px;
+    	line-height: 25px;
+		font-size: 15px;
+    }
+}
+@media (max-width: 510px) {
+	.control-wrap ul {
+    	width: 75%;
+	}
+	.si-txt, .support-txt, .custom-txt, .db-txt {
+        font-size: 0.75rem;
+    }
+    #si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+        height: 22px;
+        line-height: 22px;
+    }
+    .i-topBox-title > span > img {
+        width: 80%;
+        padding-right: 0px;
+    }
+    #btn-box > p {
+        width: 19px;
+        height: 19px;
+        font-size: 12px;
+    }
+    #si-topBox, #support-topBox, #custom-topBox, #db-topBox {
+        font-size: 0.65rem;
+    }
+    #si-box {
+        width: 200px;
+        height: 165px;
+    }
+    .si-txt {
+        padding-left: 5px;
+    }
+    #support-box {
+        width: 200px;
+        height: 195px;
+    }
+    #custom-box {
+        width: 174px;
+        height: 115px;
+    }
+    .custom-txt {
+        padding-left: 7px;
+	}
+	#db-box {
+        width: 235px;
+        height: 130px;
+    }
+    #outsourcing-wrap {
+        height: 1000px;
+    }
+    #o-content {
+        width: 85%;
+    }
+    #app-box {
+    	margin-left: 0;
+    }
+    #notice-wrap {
+       	height: 1000px;
+    }
+    #notice-title {
+    	margin-top: 20%;
+    }
+    th, td {
+    	padding: 13px;
+    }
+    table thead th:nth-child(1),
+    table thead th:nth-child(2) {
+    	font-size: 0.9rem;
+    }
+    #recruit-wrap {
+        height: 1250px;
+    }    
+    #recruit-content {
+        max-width: 90%;
+    }
+    .talent-content > p {
+        font-size: 0.7rem;
+        padding-top: 5px;
+    }
+    #talent-wrap > h2, #employ-wrap > h2 {
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+    .employ-txt {
+        height: 90%;
+    }
+} 
+@media (max-width: 490px) {
+	#g-title > h2, #h-title > h2, #r-title > h2, 
+	#b-title > h2, #i-title > h2, #o-title > h2, 
+	#c-title > h2, #recruit-title > h2, #notice-title > h2, 
+	#sitemap-title > h2 {
+        font-size: 2.1rem;
+    }
+	.g-typing, .h-typing, .r-typing, .i-typing, .b-typing, 
+	.n-typing, .recruit-typing {
+        font-size: 1.1rem;
+    }
+    .c-typing {
+    	font-size: 0.75rem;
+    }
+    #g-title {
+    	margin-top: 15%;
+    }
+    #r-title {
+        margin-top: 15%;
+    }
+	#g-box {
+        width: 100%;s
+        height: 440px;
+    }
+    .g-txt {
+        height: 85.5%;
+    }
+	#g-content {
+        max-width: 85%;
+    }
+    .g-txt {
+        font-size: 0.65rem;
+        padding-top: 30px;
+        padding: 20px;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+        font-size: 1rem;
+    }
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.6rem;
+    }
+    .control-wrap ul {
+        width: 76%;
+    }
+    .control-button {
+        font-size: 0.55rem;
+        height: 55px;
+    }
+    .b-content-txt > p {
+        height: 190px;
+    }
+    #i-content {
+        width: 80%;
+    }
+    #integration-wrap {
+        height: 950px;
+    }
+    #si-box {
+        width: 220px;
+        height: 165px;
+    }
+    #support-box {
+        width: 220px;
+        height: 200px;
+	    margin-top: -2%;
+	    margin-left: 8%;        
+    }
+    .support-txt {
+        padding-top: 13px;
+        padding-left: 10px;
+    }
+    #custom-box {
+        width: 200px;
+        height: 120px;
+		margin-left: 36%;
+        margin-top: -2%;
+    }
+    #db-box {
+        width: 230px;
+        height: 130px;
+        margin-left: 15%;
+        margin-top: -2%;
+    }
+    #i-title {
+        margin-top: 20%;
+    }
+    .i-typing {
+    	font-size:0.95rem;
+    }
+    #c-content {
+        width: 70%;
+    }
+    #bpr-box {
+        width: 306px;
+        height: 155px;
+        margin-top: -2%;
+        margin-left: -6%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.55rem;
+    }
+    #paging_div > .paging_align a {
+        padding: 5px 10px;
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    .container2 {
+        height: 55%;
+    }
+    .cont {
+        min-height: 400px;
+    }
+    #sitemap-wrap {
+        height: 670px;
+    }
+    #st-wrap {
+        max-width: 80%;
+    }
+    #st-wrap > li {
+        font-size: 1.1rem;
+	}
+	.sitemap-sub {
+        top: 55px;
+        font-size: 1rem;
+    }
+    .sitemap-sub > li {
+        height: 35px;
+    }
+    #sitemap-title {
+        margin-top: 25%;
+    }
+}
+@media (max-width: 440px) {
+	#g-title > h2, #h-title > h2, #r-title > h2, 
+	#b-title > h2, #i-title > h2, #o-title > h2, 
+	#c-title > h2, #recruit-title > h2, #notice-title > h2, 
+	#sitemap-title > h2 {
+        font-size: 2rem;
+    }
+    #greeting {
+        height: 1000px;
+    }
+	#d-box {
+        width: 340px;
+        height: 175px;
+    }
+    .d-topBox {
+    	height: 25px;
+    	font-size: 0.8rem;
+    }
+	.d-content > img {
+        width: 18%;
+    }
+    .d-topBox > p {
+    	width: 22px;
+    	height: 22px;
+		font-size: 16px;
+    }
+	.d-content-txt > p {
+        font-size: 1rem;
+        line-height: 18px;
+        padding-left: 2%;
+    }
+    .d-content-txt > h4 {
+        font-size: 0.65rem;
+        margin-top: 8px;
+    }
+    .d-btn > button {
+        width: 100px;
+        height: 30px;
+    }
+    .d-btn {
+        width: 30%;
+        margin-top: 10px;
+    }
+    .g-topBox {
+    	width: 99%;
+    	height: 25px;
+    }
+    #btn-box > p {
+	    width: 23px;
+	    height: 23px;
+	    font-size: 16px;
+    }
+    .g-topBox-title > p {
+    	font-size: 0.85rem;
+    }
+    .g-select {
+    	font-size: 0.8rem;
+    }
+    .g-topBox-title img, .d-topBox-title img  {
+    	    width: 75%;
+    }
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.5rem;
+    }    
+    .history3 {
+        bottom: 41%;
+    }    
+    .history4 {
+        bottom: 24%;
+    }
+    #h-title {
+    	width: 100%;
+    	margin-top: 15%;
+    }
+    .stairs {
+        top: 40%;
+    }
+    .history1 {
+	    top: 28%;
+	}
+	.history2 {
+        top: 37%;
+    }
+    .history3 {
+        bottom: 37%;
+    }
+    .history4 {
+        bottom: 20%;
+    }
+    #road-wrap {
+        height: 1200px;
+    }
+    #b-control > p {
+        width: 87%;
+    }
+    .control-wrap ul {
+        width: 90%;
+    }
+    #business-box {
+        width: 75%;
+        height: 53%;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        font-size: 0.63rem;
+    }
+    #btn-box > p {
+        width: 18px;
+        height: 18px;
+        font-size: 13px;
+    }
+    .g-select {
+        font-size: 0.7rem;
+    }
+    .si-icon, .os-icon, .ic-icon {
+        font-size: 0.75rem;
+    }
+    .ic-icon > img {
+        padding-bottom: 3px;
+        width: 35%;
+    }
+    #secure-box {
+        width: 221px;
+        height: 129px;
+        margin-left: 5%;
+        margin-top: -3%;
+    }
+    #outsourcing-wrap {
+        height: 900px;
+    }
+    #o-title {
+        margin-top: 20%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.53rem;
+    }
+    .o-typing {
+        font-size: 0.53rem;
+        margin-top: 14px;
+    }
+    .o-typing::before {
+		height: 15px;
+    }
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.5rem;
+    }
+    #integration-wrap > a:nth-child(1) {
+        top: 18%;   
+    }
+	.si-icon > img {
+        padding-bottom: 2px;
+        width: 45%;
+    }
+    #notice-wrap {
+        height: 950px;
+    }
+    .container2 {
+        height: 52%;
+    }
+    .cont {
+        min-height: 350px;
+    }
+    .content-btn {
+        width: 80px;
+        height: 26px;
+        font-size: 12px;
+        margin-left: 20px;   
+    }
+    .n-dot3 {
+    	top: 3%;
+    }
+    #recruit-wrap {
+        height: 1100px;
+    }
+    .talent-content > img {
+        width: 26%;
+    }
+    .talent-content > h3 {
+        font-size: 17px;
+    }
+    .talent-content > p {
+        font-size: 0.6rem;
+    }
+    #talent-wrap > h2, #employ-wrap > h2 {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    #employ-box {
+        width: 95%;
+        height: 470px;
+    }
+    .employ-txt {
+        height: 88.5%;
+    }
+    .employ-txt > li {
+        margin-bottom: 30px;
+    }
+    .employ-txt > li > h3 {
+        font-size: 16px;
+    }
+    .employ-txt > li > p {
+        font-size: 13px;
+    }
+    .employ-txt > li {
+        margin-bottom: 35px;
+    }
+    #recruit-title {
+    	margin-top: 20%;
+    }
+	#st-wrap > li {
+        height: 45px;
+        line-height: 45px;
+	}
+    .sitemap-sub > li {
+        height: 35px;
+    }
+    .sitemap-sub {
+        top: 50px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 430px) {
+	.g-txt {
+        font-size: 0.6rem;
+        height: 88%;
+    }
+    #business-wrap {
+        height: 980px;
+    }
+    #business-box {
+        width: 75%;
+        height: 55%;
+    }
+    .i-typing {
+    	font-size: 0.9rem;
+    }
+    #isp-topBox, #bpr-topBox, #secure-topBox, #recover-topBox {
+        height: 21px;
+        line-height: 21px;
+    }
+	.bpr-txt {
+        padding-top: 16px;
+        height: 70%;
+        padding-left: 10px;
+    }
+    #ito-box {
+        height: 45%;
+    }
+    #infra-box {
+        height: 44%;
+    }
+    #app-box {
+        width: 49%;
+		height: 39.5%;
+	}
+	#se-box {
+        width: 53%;
+        height: 43.5%;
+	}
+	.ito-txt, .infra-txt, .app-txt, .se-txt {
+        padding: 10px 3px;
+    }
+    #outsourcing-wrap > a:nth-child(1) {
+        top: 10%;
+        left: 3%;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 414px) {
+	.g-typing, .h-typing, .r-typing, .b-typing,
+	.c-typing, .n-typing, .recruit-typing {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    #greeting {
+        height: 900px;
+    }
+    #g-box {
+        height: 385px;
+    }
+	.g-txt {
+        font-size: 0.58rem;
+        height: 86%;
+        padding: 15px;
+    }
+    #d-box {
+        width: 300px;
+        height: 150px;
+    }
+    .d-content-txt > p {
+        font-size: 0.9rem;
+        line-height: 15px;
+        padding-left: 2%;
+    }
+    .d-content-txt > h4 {
+        font-size: 0.55rem;
+        margin-top: 4px;
+    }
+    .d-btn > button {
+        width: 90px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+    #business-wrap {
+        height: 835px;
+    }
+	#business-wrap {
+        height: 900px;
+    }
+    #bpr-box {
+        width: 285px;
+        margin-left: 2%;
+    }
+    #consult-wrap > a:nth-child(1) {
+        top: 19%;
+        left: 2%;
+    }
+    #c-content {
+        width: 80%;
+    }
+    #consult-wrap > a:nth-child(1) {
+        top: 17%;
+        left: 2%;
+    }
+    .c-typing {
+		font-size: 0.65rem;
+    }
+    .isp-txt, .bpr-txt, .secure-txt, .recover-txt {
+        font-size: 0.65rem;
+    }
+	#isp-box {
+        width: 245px;
+        height: 140px;
+    }
+    #secure-box {
+        width: 200px;
+        height: 121px;
+    }
+    .secure-txt {
+        height: 64%;
+    }
+        #recover-box {
+        width: 228px;
+        height: 135px;
+    }
+    #c-content {
+    	margin-top: 10%;
+    }
+    #outsourcing-wrap > a:nth-child(1) {
+        top: 9%;
+        left: 4%;
+    }
+    #outsourcing-wrap > a > div > img {
+        width: 35%;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.51rem;
+    }
+    .si-icon, .os-icon, .ic-icon {
+        font-size: 0.65rem;
+    }
+    #ito-topBox, #infra-topBox, #app-topBox, #se-topBox {
+        font-size: 0.6rem;
+    }
+    #btn-box > p {
+        width: 15px;
+        line-height: 15px;
+        height: 15px;
+        font-size: 9px;
+    }
+	#o-content {
+        width: 91%;
+    }
+    table {
+        font-size: 0.8rem;
+    }
+    #st-wrap {
+        max-width: 90%;
+    }
+    #st-wrap > li {
+        font-size: 1rem;
+    }
+    .sitemap-sub {
+        top: 40px;
+        font-size: 0.85rem;
+    }
+    .sitemap-sub > li {
+        height: 30px;
+    }
+    #sitemap-title {
+        margin-top: 30%;
+    }
+}
+@media (max-width: 390px) {
+	.b-dot4 {
+	    bottom: 4%;
+    	right: 29%;
+	}
+	.g-txt > span {
+        font-size: 0.75rem;
+    }
+	.g-txt {
+        font-size: 0.55rem;
+    }
+    #history-wrap {
+        height: 780px;
+    }
+    .history2 {
+        top: 36%;
+    }
+    #road-wrap {
+        height: 1000px;
+    }
+    #map {
+        top: 13%;
+        height: 300px;
+    }
+    #l-box {
+        height: 354px;
+    }
+    .road-info > ul > li > h3 {
+        font-size: 1rem;
+        padding-bottom: 3px;
+    }
+    .road-info > ul > li > p {
+        font-size: 0.7rem;
+    }
+    .road-info > ul > li > h3 > span {
+        font-size: 13px;
+    }
+    #transport-wrap > h3 {
+        font-size: 0.9rem;
+    }
+    .transport > div > div > h4 {
+        font-size: 1rem;
+    }
+    #transport-wrap > h3 > span {
+        font-size: 1.1rem;
+    }
+    .transport > div > div > p {
+        font-size: 0.72rem;
+        padding-top: 3px;
+    }
+    .b-content-txt {
+        width: 85%;
+    }
+    .i-typing {
+        font-size: 0.85rem;
+    }
+    #app-box {
+        height: 39%;
+    }
+	#ito-box {
+        height: 44%;
+    }
+    #infra-box {
+        height: 44%;
+    }
+	#se-box {
+        height: 43.5%;
+    }
+    .c-typing {
+		width: 62ch;
+		font-size: 0.63rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+	    font-size: 0.49rem;
+	}
+	table {
+        font-size: 0.7rem;
+    }
+    table thead th:nth-child(1), table thead th:nth-child(2) {
+        font-size: 0.8rem;
+    }
+    th {
+        padding: 9px;
+    }
+    td {
+        padding: 12px;
+    }
+    #recruit-wrap {
+        height: 1000px;
+    }
+    #employ-wrap {
+    	margin-top: 30%;
+    }
+    .employ-txt > li > h3 {
+        font-size: 15px;
+    }
+	.employ-txt {
+        padding: 17px;
+    }
+    #employ-box {
+        width: 95%;
+        height: 430px;
+    }
+    .employ-txt {
+        height: 89.5%;
+    }
+    .talent-content > img {
+        width: 35%;
+    }
+    .talent-content > p {
+        font-size: 0.53rem;
+    }
+	.talent-content > p {
+        font-size: 0.53rem;
+    }
+    #employ-topBox {
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .i-topBox-title > span > img {
+        width: 63%;
+    }
+}
+@media (max-width: 375px) {
+	#g-title > h2, #h-title > h2, #r-title > h2, #b-title > h2, 
+	#i-title > h2, #o-title > h2, #c-title > h2, #recruit-title > h2, 
+	#notice-title > h2, #sitemap-title > h2 {
+        font-size: 2rem;
+    }
+	.g-typing, .h-typing, .r-typing, .b-typing,  
+	.n-typing, .recruit-typing {
+        font-size: 0.9rem;
+    }
+    #h-title {
+        margin-top: 20%;
+    }
+    #g-title {
+        margin-top: 20%;
+    }
+    .h-typing {
+    	margin-top: 10px;
+    }
+    #r-title {
+        margin-top: 20%;
+    }
+    #b-title {
+        margin-top: 20%;
+    }
+	.g-txt > span {
+        font-size: 0.7rem;
+    }
+	.g-txt {
+        font-size: 0.53rem;
+    }
+    #history-wrap {
+        height: 700px;
+    }
+    .history3 {
+        bottom: 34%;
+    }
+    .history4 {
+        bottom: 16%;
+    }
+    .b-content-txt > h2 {
+        font-size: 1.3rem;
+    }
+    .b-content-txt > p {
+        height: 210px;
+        margin-top: 3%;
+    }
+    .control-button {
+        font-size: 0.5rem;
+        height: 50px;
+    }
+    #b-control > p {
+        font-size: 0.65rem;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.47rem;
+    }
+	.o-typing {
+        font-size: 0.48rem;
+        margin-top: 14px;
+    }
+    #notice-wrap {
+        height: 850px;
+    }
+    .container2 {
+    	margin-top: 10%;
+        height: 57%;
+    }
+    .title {
+        padding: 7px 15px;
+        font-size: 13px;
+    }
+    .info {
+        padding: 5px 15px;
+        font-size: 9.5px;
+    }
+    .employ-txt > li > h3 {
+        font-size: 14px;
+    }
+    .employ-txt > li > p {
+        font-size: 12px;
+    }
+    #st-wrap > li {
+        font-size: 0.9rem;
+    }
+    .sitemap-sub {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 360px) {
+	.g-topBox-title img, .d-topBox-title img  {
+    	    width: 70%;
+    }
+	.g-txt > span {
+        font-size: 0.69rem;
+    }
+	.g-txt {
+        font-size: 0.5rem;
+        padding: 13px;
+    }
+    .history1 > h3, .history2 > h3, .history3 > h3, .history4 > h3 {
+        font-size: 0.9rem;
+    }
+    .history1 > ul, .history2 > ul, .history3 > ul, .history4 > ul {
+        font-size: 0.45rem;
+    }
+    .history3 {
+        bottom: 35%;
+    }
+    .history4 {
+        bottom: 18%;
+    }
+    #business-box {
+        height: 54%;
+    }
+    .i-typing {
+    	font-size: 0.75rem;
+    }
+    .c-typing {
+        font-size: 0.6rem;
+    }
+    #outsourcing-wrap {
+        height: 830px;
+    }
+    .ito-txt, .infra-txt, .app-txt, .se-txt {
+        font-size: 0.45rem;
+    }
+    #o-content {
+        width: 95%;
+    }
+    .o-typing {
+		width: 77ch;
+    }
+    #sitemap-title {
+        margin-top: 35%;
+    }
+}
+@media (max-width: 344px) {
+	.b-typing {
+		font-size: 0.85rem;
+	}
+	.g-txt > span {
+        font-size: 0.65rem;
+    }
+    .g-txt {
+        font-size: 0.48rem;
+    }
+    .road-info > ul > li > p {
+        font-size: 0.65rem;
+    }
+    .transport > div > div > p {
+        font-size: 0.7rem;
+    }
+    .b-content-txt > p {
+        font-size: 0.75rem;
+    }
+    #b-control > p {
+        width: 90%;
+    }
+    #business-box {
+        height: 52%;
+    }
+    .control-wrap ul {
+        width: 95%;
+    }
+    #b-control {    
+    	margin-top: 5%;
+    }
+}

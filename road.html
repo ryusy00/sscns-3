@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/subscript.js"></script>
+    <script>
+        // 각 영역별 스크롤 시 fadeinUpdown 애니메이션
+        document.addEventListener('DOMContentLoaded', function() {
+            const rTitle = document.getElementById('r-title');
+            const locationWrap = document.getElementById('location-wrap');
+            
+
+            // talent-wrap과 employ-wrap에 대한 애니메이션 클래스 추가
+            rTitle.classList.add('fadeInUp');
+            locationWrap.classList.add('fadeInUp');
+        });
+    </script>
+    <title>성산C&S 웹사이트 시안3 - 오시는길</title>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- 헤더, 네비게이션 영역 -->
+    <header id="topBox2">   
+        <div id="header-wrap">
+            <div class="logo-home">
+                <a href="index.html">
+                    <img src="images/24/main-logo.png" alt="헤더 로고">
+                </a>
+            </div>
+            <ul id="menu2">
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub1">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li style="background-color: #92FFF1;"><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub1">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">SI</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                    <ul class="sub1">
+                        <li><a href="recruit.html">Recruit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+                    <ul class="sub1">
+                        <li><a href="notice.html">Notice</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburgerBtn">
+                <a href="index.html" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div id="gnb" class="menu-box">
+            <ul>
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">System Integration</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+            </ul>
+        </div>
+    </header>
+    <!-- 오시는길 영역 -->
+    <div id="road-wrap">
+        <img src="images/24/animate-dot1.png" class="r-dot1" alt="dot1">
+        <img src="images/24/animate-dot1.png" class="r-dot2" alt="dot2">
+        <span class="r-dot3"></span>
+        <img src="images/24/animate=dot2.png" class="r-dot4" alt="dot2">
+        <div id="r-title">
+            <h2>Way to come</h2>
+            <p class="r-typing"></p>
+        </div>
+        <div id="location-wrap">
+            <!-- 지도 -->
+            <img src="images/24/sub-img/map.png" alt="map">
+            <div class="road-info">
+                <ul>
+                    <li>
+                        <h3><span><i class="fa-solid fa-location-dot"></i></span>Location</h3>
+                        <p>(61981) 광주광역시 서구대남대로 465 광주상공회의소 503호</p>                    
+                    </li>
+                    <li>
+                        <h3><span><i class="fa-solid fa-phone"></i></span>Tel</h3>
+                        <p>068-676-9960~2</p>                    
+                    </li>
+                    <li>
+                        <h3><span><i class="fa-solid fa-print"></i></span>Fax</h3>
+                        <p>068-676-4554</p>                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="animated-title">
+            <div class="track">
+                <div class="content">
+                    We have everything I need for it business.&nbsp;&nbsp;We have everything I need for it business.&nbsp;
+                    We have everything I need for it business.&nbsp;&nbsp;We have everything I need for it business.&nbsp;
+                    We have everything I need for it business.&nbsp;&nbsp;We have everything I need for it business.&nbsp;
+                    We have everything I need for it business.&nbsp;&nbsp;    
+                </div>
+            </div>
+        </div>
+        <div id="transport-wrap">
+            <h3><span><i class="fa-solid fa-person-walking"></i></span>찾아오시는 길</h3>
+            <div class="transport">
+                <div class="bus">
+                    <i class="fa-solid fa-bus"></i>
+                    <div>
+                        <h4>Bus</h4>
+                        <p>
+                            상공회의소 정류장에서 하차, 맞은편 도보 3분  <br>
+                            (지원 25, 수완 12, 지원56, 화순 217, 화순 218-1)
+                        </p>
+                    </div>
+                </div>
+                <div class="subway">
+                    <i class="fa-solid fa-train-subway"></i>
+                    <div>
+                        <h4>Subway</h4>
+                        <p>
+                            지하철 1호선 농성역에서 하차 후  <br>
+                            2번 출구에서 상공회의소 방향으로 도보 100M
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 푸터 영역 -->
+    <section id="footer-wrap" class="section">
+        <div id="footer-content">
+            <div id="footer-logo">
+                <a href="#"><img src="images/24/main-logo.png" alt="footer-logo"></a>
+            </div>
+            <div id="footer-center">
+                <ul>
+                    <li><a href="greeting.html">회사소개</a></li>
+                    <span>|</span>
+                    <li><a href="privacy.html">개인정보처리방침</a></li>
+                    <span>|</span>
+                    <li><a href="sitemap.html">사이트맵</a></li>
+                </ul>
+                <p>광주광역시 서구 대남대로 465 상공회의소 빌딩 503호</p>
+                <div class="contact">
+                    <p>Tel.062-676-9960</p>
+                    <p>Tel.062-646-4554</p> 
+                </div>
+            </div>
+            <ul id="site-map">
+                <li><a href="greeting.html">ABOUT</a></li>
+                <li><a href="business.html">BUSINESS</a></li>
+                <li><a href="recruit.html">RECRUIT</a></li>
+                <li><a href="notice.html">NEWS</a></li>
+            </ul>
+        </div>
+        <p id="copy-right">COPYRIGHT ©<script>document.write(new Date().getFullYear());</script> SSCNS ALL RIGHTS RESERVED</p>
+    </section>
+</body>
+</html>

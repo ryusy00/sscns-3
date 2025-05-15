@@ -3,12 +3,28 @@ history.scrollRestoration = "auto"
 // 마우스 커서 애니메이션
 document.addEventListener('DOMContentLoaded', function() {
     const customCursor = document.querySelector('.custom-cursor');
+    let cursorX = 0, cursorY = 0;
+    let mouseX = 0, mouseY = 0;
 
-    document.addEventListener('mousemove',function(e) {
-        // 마우스 위치에 따라 커서 아이콘 위치 업데이트
-        customCursor.style.left = e.pageX + 'px';
-        customCursor.style.top = e.pageY + 'px';
+    // 마우스 움직임에 따라 목표 위치 업데이트
+    document.addEventListener('mousemove', function(e) {
+        mouseX = e.pageX;
+        mouseY = e.pageY;
     });
+
+    function animateCursor() {
+        // 현재 커서 위치를 목표 위치로 부드럽게 이동
+        cursorX += (mouseX - cursorX) * 0.3;
+        cursorY += (mouseY - cursorY) * 0.3;
+
+        customCursor.style.left = cursorX + 'px';
+        customCursor.style.top = cursorY + 'px';
+
+        requestAnimationFrame(animateCursor);
+    }
+
+    // 애니메이션 시작
+    animateCursor();
 });
 
 // 퀵 네비게이션 효과
@@ -45,15 +61,16 @@ $(function() {
     });
 });
 
+
 // script.js
-window.addEventListener('scroll', function() {
-    const sidebar = document.getElementById('sidebar');
-    if (window.scrollY >= 1080) {
-        sidebar.classList.add('visible');
-    } else {
-        sidebar.classList.remove('visible');
-    }
-});
+// window.addEventListener('scroll', function() {
+//     const sidebar = document.getElementById('sidebar');
+//     if (window.scrollY >= 1080) {
+//         sidebar.classList.add('visible');
+//     } else {
+//         sidebar.classList.remove('visible');
+//     }
+// });
 
 document.querySelectorAll('.sidebar > ul > li > a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -100,7 +117,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const slides = document.querySelectorAll('.screen li');
     const totalSlides = slides.length;
 
-    document.getElementById('prev-btn').addEventListener('click', showPrevSlide);
+    // document.getElementById('prev-btn').addEventListener('click', showPrevSlide);
     document.getElementById('next-btn').addEventListener('click', showNextSlide);
 
     function showPrevSlide() {

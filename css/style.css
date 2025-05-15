@@ -11,7 +11,7 @@ body {
     background-color: #92FFF1;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    transition: all 0.05s ease;
+    /* transition: all 0.02s ease; */
     z-index: 9999;
 }
 .animates {
@@ -54,6 +54,10 @@ body {
     z-index: 100;
     transition: all 0.5s;
     height: 100px;
+    transition: background-color 0.3s ease; /* 부드러운 전환 효과 */
+}
+#topBox.scrolled {
+    background-color: #1300a57f; /* 스크롤 시 변경할 배경색 */
 }
 #header-wrap {
     width: 100vw;
@@ -115,9 +119,9 @@ body {
     color: #fff;
     font-size: 18px;
 }
-.logo-home > a > img {
-    filter: invert(1); /* 흰색 이미지를 검정색으로 변환 */
-}
+/* .logo-home > a > img {
+    filter: invert(1); 
+} */
 #topBox.scrolled .logo-home > a > img {
     filter: invert(0); /* 흰색 이미지를 검정색으로 변환 */
 }
@@ -143,7 +147,7 @@ body {
     height: 4px;
     border-radius: 4px;
     width: 100%;
-    background-color: #333;
+    background-color: #fff;
     top: 0;
     transition: background-color 0.5s;
 }
@@ -167,19 +171,19 @@ body {
 .menuBtn.active > span:nth-child(3) {
     transform: rotate(-45deg);
 }
-#topBox.scrolled .menuBtn > span {
+/* #topBox.scrolled .menuBtn > span {
     background-color: #fff; 
-}
+} */
 /* 네비게이션 */
 #gnb {
-    display: none;
+    visibility: hidden;
     position: fixed;
-    background: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     right: 0;
     width: 640px;
     height: 100vh;
-    opacity: 0;
+    /* opacity: 0; */
     transition: 0.5s ease;
     z-index: 13;
     display: flex;
@@ -187,12 +191,11 @@ body {
     align-items: center;
     transition: background-color 0.5s;
 }
-#topBox.scrolled #gnb {
+/* #topBox.scrolled #gnb {
     background-color: rgba(0, 0, 0, 0.5);
-}
+} */
 #gnb.visible {
     height: 100%;
-    opacity: 1;
     visibility: visible;
 }
 .menu-box > ul {
@@ -214,21 +217,23 @@ body {
     cursor: pointer;
 }
 .menu-box > ul > li:hover a {
-    color: #1300A5;
+    /* color: #1300A5; */
+    color: #92FFF1;
     text-decoration: underline;
-    text-decoration-color: #1300A5;
+    /* text-decoration-color: #1300A5; */
+    text-decoration-color: #92FFF1;
     text-decoration-thickness: 3px;
 }
-#topBox.scrolled .menu-box > ul > li > a {
+/* #topBox.scrolled .menu-box > ul > li > a {
     color: #000;
-}
+} */
 #topBox.scrolled .menu-box > ul > li:hover a {
     color: #92FFF1;
     text-decoration-color: #92FFF1;
 }
 .menu-box a {
     font-style: normal;
-    color: #444;
+    color: #fff;
     text-decoration: none;
     /* transition: color 0.3s; */
 }
@@ -275,8 +280,9 @@ body {
     color: transparent;
     text-decoration: none;
 }
-.sidebar > ul > li:hover {
-    background-color: #fff;
+.sidebar > ul > li:hover,
+.sidebar > ul > li.active {
+	background-color: #fff;
     width: 18px;
     height: 18px;
 }
@@ -286,6 +292,15 @@ body {
 }
 .section {
     height: 100vh;
+}
+/* 반응형 스타일링 */
+@media (max-width: 992px) {
+    .sidebar {
+        display: none;  /* 수정: 992px 이하에서는 숨김 */
+    }
+    .content {
+        margin-left: 0;  /* 수정: 992px 이하에서는 여백 제거 */
+    }
 }
 /* 메인배너 영역 */
 #main-banner {
@@ -706,12 +721,13 @@ body {
 .click1 {
     display: block;
     position: absolute; 
-    bottom: 45%;
-    right: 21%;
+    top: 39%;
+    right: 37.8%;
     font-size: 18px;
     color: #00000084;
     text-align: center;
     animation: upAndDown2 0.7s infinite;
+    z-index: 100;
 }
 .click2 {
     display: block;
@@ -798,7 +814,7 @@ body {
     top: 35%;
     left: 55%;
     transform: translate(-55%,-35%);
-    width: 800px;
+    width: 60%;
 }
 .screen {
     position: absolute;
@@ -810,8 +826,8 @@ body {
 }
 .screen > li {
     position: absolute;
-    top: 27.8%;
-    left: 52.8%;
+    top: 30%;
+    left: 42%;
     transform: translate(-50%,-25%);
     opacity: 0;
     transition: opacity 1s ease-in-out;
@@ -824,8 +840,8 @@ body {
     display: none;
     position: absolute;
     top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40%;
+    transform: translateX(-40%);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -838,10 +854,13 @@ body {
     margin-top: 28px;
 }
 .screen > li > span > h4 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    margin-top: 20px;
+    margin-top: 40px;
 } 
+.screen > li > img {
+    max-width: 87.5%;
+}
 .screen > li:hover span {
     display: block;
 }
@@ -858,17 +877,18 @@ body {
 }
 .nav-btn {
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
     border: none;
     cursor: pointer;
     z-index: 1000;
 }
 #prev-btn {
-    left: 20%;
+    left: 38%;
+    display: none;
 }
 #next-btn {
-    right: 20%;
+    right: 36.7%;
 }
 #sl-btn {
     position: absolute;

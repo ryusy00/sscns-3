@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/subscript.js"></script>
+    <script>
+        // 각 영역별 스크롤 시 fadeinUpdown 애니메이션
+        document.addEventListener('DOMContentLoaded', function() {
+            const bTitle = document.getElementById('b-title');
+            
+            // 요소가 화면에 보이는지 여부를 체크하고 애니메이션 클래스 추가
+            function checkAnimation() {
+                if (isElementInViewport(bTitle)) {
+                    bTitle.classList.add('fadeInUp');
+                }
+            }
+
+            // 요소가 화면에 보이는지 여부를 확인하는 함수
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // 초기 로드 시 애니메이션 체크
+            checkAnimation();
+
+            // 스크롤 이벤트 대신 resize 이벤트를 사용하여 화면 크기 변경 시 체크
+            window.addEventListener('resize', checkAnimation);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentButton = document.querySelector('.read-more1');
+            const contentButton2 = document.querySelector('.read-more2');
+            const contentButton3 = document.querySelector('.read-more3');
+            const contentButton4 = document.querySelector('.read-more4');
+
+            contentButton.addEventListener('click', () => {
+                window.location.href = 'integration.html';
+            });
+            contentButton2.addEventListener('click', () => {
+                window.location.href = 'outsourcing.html';
+            });
+            contentButton3.addEventListener('click', () => {
+                window.location.href = 'consult.html';
+            });
+            contentButton4.addEventListener('click', () => {
+                window.location.href = 'solution.html';
+            });
+        });
+    </script>
+    <title>성산C&S 웹사이트 시안3 - 사업소개</title>
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- 헤더, 네비게이션 영역 -->
+    <header id="topBox2">   
+        <div id="header-wrap">
+            <div class="logo-home">
+                <a href="index.html">
+                    <img src="images/24/main-logo.png" alt="헤더 로고">
+                </a>    
+            </div>
+            <ul id="menu2">
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub1">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub1">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">SI</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                    <ul class="sub1">
+                        <li><a href="recruit.html">Recruit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+                    <ul class="sub1">
+                        <li><a href="notice.html">Notice</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburgerBtn">
+                <a href="index.html" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div id="gnb" class="menu-box">
+            <ul>
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">System Integration</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+            </ul>
+        </div>
+    </header>
+    <!-- 고정 사이드바 -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <!-- <li><a href="main-banner"></a></li> -->
+            <li><a href="#introduction"></a></li>
+            <li><a href="#business-wrap"></a></li>
+            <li><a href="#solution"></a></li>
+            <li><a href="#contact-wrap"></a></li>
+            <li><a href="#footer-wrap"></a></li>
+        </ul>
+    </div>
+    <!-- 사업소개 영역 -->
+    <section id="business-wrap">
+        <img src="images/24/animate-dot1.png" class="b-dot1" alt="dot1">
+        <img src="images/24/animate-dot1.png" class="b-dot2" alt="dot2">
+        <span class="b-dot3"></span>
+        <img src="images/24/animate=dot2.png" class="b-dot4" alt="dot2">
+        <div id="b-title">
+            <h2>Our Business</h2>
+            <p class="b-typing"></p>
+        </div>
+        <div id="business-box">
+            <div id="b-topBox">
+                <p>Business</p>
+                <div>X</div>
+            </div>
+            <div id="b-content">
+                <div class="content-wrap" id="integration">
+                    <div class="b-content">
+                        <img src="images/24/sub-img/integration.jpg" alt="integration">
+                        <div class="b-content-txt">
+                            <h2>System Integration</h2>
+                            <p>
+                                • 맞춤형 시스템통합 구축  <br>
+                                • 시스템 설치 및 사용자 교육 <br>
+                                • 통합서비스 및 시스템 유지보수 <br>
+                                • H/W, S/W, DB 시스템 통합 구축 
+                            </p>
+                            <button class="read-more1">
+                                <a href="integration.html"></a>READ MORE >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-wrap" id="outsourcing">
+                    <div class="b-content">
+                        <img src="images/24/sub-img/outsourcing.jpg" alt="outsourcing">
+                        <div class="b-content-txt">
+                            <h2>Outsourcing</h2>
+                            <p>
+                                • ITO 컨설팅 <br>
+                                • 인프라서비스  <br>
+                                • 애플리케이션 서비스 <br>
+                                • 보안 재해 복구 서비스
+                            </p>
+                            <button class="read-more2">
+                                <a href="outsourcing.html"></a>READ MORE >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-wrap" id="consulting">
+                    <div class="b-content">
+                        <img src="images/24/sub-img/consult.jpg" alt="consult">
+                        <div class="b-content-txt">
+                            <h2>IT Consulting</h2>
+                            <p>
+                                • ISP (Information Strategy Plan) <br>
+                                • BPR (Nusiness Process Reengineering) <br>
+                                • IT architecture 컨설팅 <br>
+                                • 정보보안 컨설팅 <br>
+                                • 재해복구 컨설팅
+                            </p>
+                            <button class="read-more3">
+                                <a href="consult.html"></a>READ MORE >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-wrap" id="b-solution">
+                    <div class="b-content">
+                        <img src="images/24/sub-img/solution.jpg" alt="solution">
+                        <div class="b-content-txt">
+                            <h2>Solution</h2>
+                            <p>
+                                • YesCare(재가 장기 요양 업무)  <br>
+                                • 도서관 통합일지솔루션  <br>
+                                • IT architecture 컨설팅 <br>
+                                • SCMS(콘텐츠 관리 시스템) <br>
+                                • 영구임대보증금 관리시스템 
+                            </p>
+                            <button class="read-more4">
+                                <a href="solution.html"></a>READ MORE >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="b-control">
+            <p>※ 원하는 항목을 클릭하세요.</p>
+            <div class="control-wrap">
+                <ul>
+                    <li><button class="control-button" data-target="integration">
+                        <img src="images/24/sub-img/integration-icon.png" alt="integration-icon">
+                        <p>시스템통합</p>
+                    </button></li>
+                    <li><button class="control-button" data-target="outsourcing">
+                        <img src="images/24/sub-img/outsourcing-icon.png" alt="outsourcing-icon">
+                        <p>아웃소싱</p>
+                    </button></li>
+                    <li><button class="control-button" data-target="consulting">
+                        <img src="images/24/sub-img/consult-icon.png" alt="consult-icon">
+                        <p>IT컨설팅</p>
+                    </button></li>
+                    <li><button class="control-button" data-target="b-solution">
+                        <img src="images/24/sub-img/solution-icon.png" alt="solution-icon">
+                        <p>솔루션</p>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <!-- 푸터 영역 -->
+    <section id="footer-wrap" class="section">
+        <div id="footer-content">
+            <div id="footer-logo">
+                <a href="#"><img src="images/24/main-logo.png" alt="footer-logo"></a>
+            </div>
+            <div id="footer-center">
+                <ul>
+                    <li><a href="greeting.html">회사소개</a></li>
+                    <span>|</span>
+                    <li><a href="privacy.html">개인정보처리방침</a></li>
+                    <span>|</span>
+                    <li><a href="sitemap.html">사이트맵</a></li>
+                </ul>
+                <p>광주광역시 서구 대남대로 465 상공회의소 빌딩 503호</p>
+                <div class="contact">
+                    <p>Tel.062-676-9960</p>
+                    <p>Tel.062-646-4554</p> 
+                </div>
+            </div>
+            <ul id="site-map">
+                <li><a href="greeting.html">ABOUT</a></li>
+                <li><a href="business.html">BUSINESS</a></li>
+                <li><a href="recruit.html">RECRUIT</a></li>
+                <li><a href="notice.html">NEWS</a></li>
+            </ul>
+        </div>
+        <p id="copy-right">COPYRIGHT ©<script>document.write(new Date().getFullYear());</script> SSCNS ALL RIGHTS RESERVED</p>
+    </section>
+</body>
+</html>

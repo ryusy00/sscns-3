@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <!-- 옵션 테마 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- jQuery library 부트스트랩을 사용하려면 jQuery가 필요함-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <!-- 최신 컴파일 및 최소화된 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/subscript.js"></script>
+    <title>성산C&S 웹사이트 시안3 - 공지사항</title>
+</head>
+<script>
+    // 검색 기능
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('search-btn').addEventListener('click', function() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var tableBody = document.getElementById('notice-table-body');
+            var rows = tableBody.getElementsByTagName('tr');
+            for (var i = 0; i < rows.length; i++) {
+                var cells = rows[i].getElementsByTagName('td');
+                var match = false;
+                for (var j = 0; j < cells.length; j++) {
+                    if (cells[j].innerText.toLowerCase().includes(input)) {
+                        match = true;
+                        break;
+                    }
+                }
+                if (match) {
+                    rows[i].style.display = '';
+                } else {
+                    rows[i].style.display = 'none';
+                }
+            }
+        });
+        
+        document.getElementById('search-input').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                document.getElementById('search-btn').click();
+            }
+        });
+    });
+</script>
+<body>
+    <div class="custom-cursor"></div>
+    <!-- 헤더, 네비게이션 영역 -->
+    <header id="topBox2">   
+        <div id="header-wrap">
+            <div class="logo-home">
+                <a href="index.html">
+                    <img src="images/24/main-logo.png" alt="헤더 로고">
+                </a>
+            </div>
+            <ul id="menu2">
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub1">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub1">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">SI</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                    <ul class="sub1">
+                        <li><a href="recruit.html">Recruit</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+                    <ul class="sub1">
+                        <li><a href="notice.html">Notice</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="hamburgerBtn">
+                <a href="index.html" class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </div>
+        <div id="gnb" class="menu-box">
+            <ul>
+                <li>
+                    <a href="greeting.html">About</a>
+                    <ul class="sub">
+                        <li><a href="greeting.html">introduction</a></li>
+                        <li><a href="history.html">history</a></li>
+                        <li><a href="road.html">Location</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="business.html">Business</a>
+                    <ul class="sub">
+                        <li><a href="business.html">Business</a></li>
+                        <li><a href="integration.html">System Integration</a></li>
+                        <li><a href="outsourcing.html">Outsourcing</a></li>
+                        <li><a href="consult.html">IT Consulting</a></li>
+                        <li><a href="solution.html">Solution</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="recruit.html">Recruit</a>
+                </li>
+                <li>
+                    <a href="notice.html">News</a>
+            </ul>
+        </div>
+    </header>
+    <!-- 공지사항 페이지 -->
+    <section id="notice-wrap" class="container">
+        <img src="images/24/animate-dot1.png" class="n-dot1" alt="dot1">
+        <img src="images/24/animate-dot1.png" class="n-dot2" alt="dot2">
+        <span class="n-dot3"></span>
+        <img src="images/24/animate=dot2.png" class="n-dot4" alt="dot2">
+        <div id="notice-title" class="text-center">
+            <h2>Our Notice</h2>
+            <p class="n-typing"></p>
+        </div>
+        <div class="container contain">
+            <div class="search-container row">
+                <input type="text" id="search-input" class="col-xs-8 col-sm-10" placeholder="검색어를 입력하세요">
+                <button id="search-btn" class="col-xs-4 col-sm-2">검색</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성자</th>
+                            <th>등록일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody id="notice-table-body">
+                        <tr>
+                            <td>23</td>
+                            <td>2020년 11월 13~14일 워크샵 안내</td>
+                            <td>관리자</td>
+                            <td>2020-11-11</td>
+                            <td>569</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>사무실 보수 공사 안내</td>
+                            <td>관리자</td>
+                            <td>2020-04-21</td>
+                            <td>359</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>2019년 2월 22일~23일 상반기 워크샵 안내</td>
+                            <td>관리자</td>
+                            <td>2019-02-10</td>
+                            <td>541</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>2019 새해인사</td>
+                            <td>관리자</td>
+                            <td>2019-01-02</td>
+                            <td>569</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>2018년 6월 1-2일 워크샵 안내</td>
+                            <td>관리자</td>
+                            <td>2020-04-21</td>
+                            <td>359</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>성산드론교육원 오픈 안내</td>
+                            <td>관리자</td>
+                            <td>2019-02-10</td>
+                            <td>541</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>2018년 2월 2-3일 워크샵 안내</td>
+                            <td>관리자</td>
+                            <td>2018-01-29</td>
+                            <td>541</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>2017년 새해인사</td>
+                            <td>관리자</td>
+                            <td>2015-01-02</td>
+                            <td>541</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>2017 10월 20-21 워크샵 안내</td>
+                            <td>관리자</td>
+                            <td>2017-10-10</td>
+                            <td>541</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- 푸터 영역 -->
+    <section id="footer-wrap" class="section" class="container">
+        <div id="footer-content">
+            <div id="footer-logo">
+                <a href="#"><img src="images/24/main-logo.png" alt="footer-logo"></a>
+            </div>
+            <div id="footer-center">
+                <ul>
+                    <li><a href="greeting.html">회사소개</a></li>
+                    <span>|</span>
+                    <li><a href="privacy.html">개인정보처리방침</a></li>
+                    <span>|</span>
+                    <li><a href="sitemap.html">사이트맵</a></li>
+                </ul>
+                <p>광주광역시 서구 대남대로 465 상공회의소 빌딩 503호</p>
+                <div class="contact">
+                    <p>Tel.062-676-9960</p>
+                    <p>Tel.062-646-4554</p> 
+                </div>
+            </div>
+            <ul id="site-map">
+                <li><a href="greeting.html">ABOUT</a></li>
+                <li><a href="business.html">BUSINESS</a></li>
+                <li><a href="recruit.html">RECRUIT</a></li>
+                <li><a href="notice.html">NEWS</a></li>
+            </ul>
+        </div>
+        <p id="copy-right">COPYRIGHT ©<script>document.write(new Date().getFullYear());</script> SSCNS ALL RIGHTS RESERVED</p>
+    </section>
+</body>
+</html>
